@@ -1,8 +1,8 @@
 const Header = () => `
 <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-background-light/90 dark:bg-[#1a1a1a]/90 border-b border-[#d69e2e]/30 dark:border-[#5d4037]">
-    <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
+    <div class="flex items-center justify-between px-6 py-2 max-w-7xl mx-auto w-full">
         <a href="index.html" class="flex items-center gap-3 group">
-            <div class="size-14 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
+            <div class="size-12 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
                 <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
             </div>
             <h2 class="text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard">DreamSequence</h2>
@@ -30,7 +30,7 @@ const Header = () => `
 `;
 
 const Footer = () => `
-<footer class="mt-auto border-t border-[#d69e2e]/30 dark:border-tobacco bg-[#f0e6d2] dark:bg-[#151515] py-16 px-6 mb-24 md:mb-0">
+<footer class="mt-auto border-t border-[#d69e2e]/30 dark:border-tobacco bg-[#f0e6d2] dark:bg-[#151515] py-8 px-6 mb-24 md:mb-0">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="flex items-center gap-5">
             <div class="size-12 overflow-hidden rounded-full border border-burnt-orange/30 shrink-0">
