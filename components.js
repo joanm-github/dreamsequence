@@ -2,7 +2,7 @@ const Header = () => `
 <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-background-light/90 dark:bg-[#1a1a1a]/90 border-b border-[#d69e2e]/30 dark:border-[#5d4037]">
     <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
         <a href="index.html" class="flex items-center gap-3 group">
-            <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform">
+            <div class="size-14 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
                 <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
             </div>
             <h2 class="text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard">DreamSequence</h2>
