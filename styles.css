@@ -1,0 +1,217 @@
+/* DreamSequence - Unified Styles */
+
+/* Base Styles */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities */
+.text-glow {
+    text-shadow: 0 0 10px rgba(192, 86, 33, 0.5), 0 0 20px rgba(214, 158, 46, 0.3);
+}
+
+.crt-overlay {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+.btn-vintage {
+    background: linear-gradient(135deg, #d69e2e 0%, #b35900 100%);
+    border: 1px solid #8a4200;
+    box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-vintage:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+    border: 1px solid rgba(220, 177, 74, 0.5);
+    color: #dcb14a;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #dcb14a;
+    color: #1a1612;
+}
+
+.bandcamp-btn {
+    background-color: #629aa9;
+    color: #ffffff;
+    border: 1px solid #4c8a9a;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.bandcamp-btn:hover {
+    background-color: #558a98;
+}
+
+.bandcamp-link {
+    color: #629aa9;
+    transition: all 0.3s ease;
+}
+
+.bandcamp-link:hover {
+    color: #4c8a9a;
+    text-decoration: underline;
+}
+
+.knob-shadow {
+    box-shadow:
+        inset 0 2px 4px rgba(255, 255, 255, 0.1),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+        0 4px 12px rgba(0, 0, 0, 0.6);
+    background: radial-gradient(circle at 30% 30%, #2a2a2a, #000);
+}
+
+/* Analog Sleeve Effect */
+.analog-sleeve {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.analog-sleeve::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 8px 8px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.analog-sleeve::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* Vintage Cardboard & Photo Frames */
+.vintage-cardboard {
+    background: #dcd7cc;
+    padding: 10px;
+    border: 1px solid #b5ae9d;
+    box-shadow:
+        5px 5px 20px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.vintage-cardboard::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.photo-frame {
+    border: 2px solid #8d6e63;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.photo-frame:hover {
+    transform: rotate(0) scale(1.02);
+}
+
+/* Navigation Links */
+.nav-link {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #8d6e63;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .nav-link {
+    color: #a1887f;
+}
+
+.nav-link:hover {
+    color: #dcb14a;
+    /* mustard */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #dcb14a;
+    /* mustard */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes signal-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(214, 158, 46, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(214, 158, 46, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(214, 158, 46, 0);
+    }
+}
+
+.animate-signal-pulse {
+    animation: signal-pulse 2s infinite;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1612;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3d3226;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #dcb14a;
+}

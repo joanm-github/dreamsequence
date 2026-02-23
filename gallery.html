@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Photographic Archives | DreamSequence Studio & Live</title>
+    <meta name="description"
+        content="A visual journey through the history of DreamSequence. 35mm film captures from 1972-1980.">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
+
+    <div class="layout-container flex h-full grow flex-col">
+        <div id="main-header"></div>
+
+        <main class="flex-1 py-12 px-6">
+            <div class="max-w-7xl mx-auto">
+                <header class="mb-20 text-center">
+                    <h1
+                        class="text-5xl md:text-8xl font-black uppercase tracking-tighter text-glow text-mustard leading-none">
+                        Photographic Archives</h1>
+                    <p class="text-burnt-orange font-mono uppercase text-sm tracking-[0.4em] mt-6">Captured on 35mm film
+                        • 1972-1980</p>
+                </header>
+
+                <!-- Era 1: 1972 - 1974 -->
+                <section class="mb-20">
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-2xl font-bold uppercase tracking-widest text-mustard/80">1972 — 1974</h2>
+                        <div class="h-px flex-1 bg-white/10"></div>
+                        <span class="text-[10px] font-mono text-burnt-orange uppercase">Phase I: Trieste Sessions</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/2af12404-fb23-490f-a09b-b21768b307fc.JPG')">
+                            <img src="assets/2af12404-fb23-490f-a09b-b21768b307fc.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/ba77be7a-c151-4829-94da-861799d7b468.JPG')">
+                            <img src="assets/ba77be7a-c151-4829-94da-861799d7b468.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/691e55f2-0bc4-438b-8d48-ead984704f85.JPG')">
+                            <img src="assets/691e55f2-0bc4-438b-8d48-ead984704f85.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/c6a44725-604e-43aa-baeb-ae759a1f0174.JPG')">
+                            <img src="assets/c6a44725-604e-43aa-baeb-ae759a1f0174.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/edd5825c-4436-459a-a9ec-d10b9e5bd00c.JPG')">
+                            <img src="assets/edd5825c-4436-459a-a9ec-d10b9e5bd00c.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/7aa16815-a1d3-47fb-a623-b7d77a1030e3.JPG')">
+                            <img src="assets/7aa16815-a1d3-47fb-a623-b7d77a1030e3.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Era 2: 1975 - 1978 -->
+                <section>
+                    <div class="flex items-center gap-4 mb-8">
+                        <h2 class="text-2xl font-bold uppercase tracking-widest text-mustard/80">1975 — 1978</h2>
+                        <div class="h-px flex-1 bg-white/10"></div>
+                        <span class="text-[10px] font-mono text-burnt-orange uppercase">Phase II: European
+                            Transit</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG')">
+                            <img src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/90328044-370e-4dc6-848e-408ddfa3e2a9.JPG')">
+                            <img src="assets/90328044-370e-4dc6-848e-408ddfa3e2a9.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <div class="group relative cursor-pointer overflow-hidden photo-frame aspect-square"
+                            onclick="showModal('assets/035eb99c-dcf9-447e-bbc6-7f73febb771e.JPG')">
+                            <img src="assets/035eb99c-dcf9-447e-bbc6-7f73febb771e.JPG"
+                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="mt-24 text-center">
+                <p class="text-[#a1887f] uppercase tracking-[0.2em] text-xs">End of archive file.</p>
+            </div>
+    </div>
+    </main>
+
+    <div id="main-footer"></div>
+    </div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>

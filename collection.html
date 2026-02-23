@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Discography | DreamSequence Analog Archives</title>
+    <meta name="description"
+        content="Explore the analog trilogy of DreamSequence. Recorded on magnetic tape in Trieste.">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
+
+    <div class="layout-container flex h-full grow flex-col">
+        <div id="main-header"></div>
+
+        <main class="flex-1 py-12 px-6">
+            <div class="max-w-7xl mx-auto">
+                <!-- Featured Release (Nebbia) -->
+                <div class="mb-24">
+                    <div class="flex flex-col lg:flex-row gap-16 items-center">
+                        <div class="w-full lg:w-2/5 flex justify-center">
+                            <div class="relative group cursor-crosshair max-w-sm">
+                                <div
+                                    class="vintage-cardboard transform group-hover:rotate-0 transition-transform duration-500 -rotate-2">
+                                    <div class="relative aspect-square overflow-hidden shadow-inner">
+                                        <img src="assets/IMG_20251002_121749.png" alt="Nebbia Album Cover"
+                                            class="w-full h-full object-cover grayscale-[0.1] contrast-110">
+                                        <div class="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Record Peek Effect -->
+                                <div
+                                    class="absolute top-1/2 -translate-y-1/2 -right-4 w-20 h-20 bg-[#111] rounded-full -z-10 group-hover:-right-12 transition-all duration-700 hidden lg:block opacity-40">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 flex flex-col gap-8">
+                            <div>
+                                <span class="text-primary font-mono tracking-[0.4em] uppercase text-xs mb-4 block">New
+                                    Transmission</span>
+                                <h1
+                                    class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-glow text-mustard leading-none">
+                                    Nebbia</h1>
+                                <p class="text-burnt-orange font-mono text-sm mt-4 tracking-widest">Released: Autumn
+                                    1972 • Trieste</p>
+                            </div>
+                            <p class="text-xl text-[#d4c5a6] font-light leading-relaxed italic">
+                                "A fog that doesn't hide, but reveals. The sound of the Adriatic pulse filtered through
+                                vacuum tubes."
+                            </p>
+                            <div class="flex flex-wrap gap-5 mt-4">
+                                <button onclick="addToCart('Nebbia Digital', 7, 'assets/IMG_20251002_121749.png')"
+                                    class="flex items-center gap-3 cursor-pointer justify-center rounded-sm h-12 px-8 bg-primary hover:bg-amber-glow text-[#1a1612] text-sm font-bold tracking-[0.15em] uppercase transition-all hover:-translate-y-0.5 shadow-[0_0_15px_rgba(220,177,74,0.2)]">
+                                    <span class="material-symbols-outlined">shopping_bag</span>
+                                    <span>Buy Digital $7</span>
+                                </button>
+                                <button
+                                    onclick="playAlbum('Nebbia', 'Nebbia (1972)', 'assets/IMG_20251002_121749.png', 'https://dreamsequence3.bandcamp.com/')"
+                                    class="flex items-center gap-3 cursor-pointer justify-center rounded-sm h-12 px-8 bg-transparent hover:bg-[#3d3226] text-primary border border-primary/40 text-sm font-bold tracking-[0.15em] uppercase transition-all hover:-translate-y-0.5">
+                                    <span class="material-symbols-outlined filled">play_arrow</span>
+                                    <span>Play Now</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archive Section -->
+                <div class="border-t border-[#3d3226] pt-16">
+                    <div class="flex flex-wrap items-center justify-between gap-6 mb-12">
+                        <h2 class="text-primary text-3xl font-light tracking-[0.15em] uppercase font-display">The Analog
+                            Trilogy</h2>
+                        <div class="flex gap-4">
+                            <button
+                                class="text-xs uppercase tracking-widest font-mono text-primary border-b border-primary pb-1">All
+                                Signals</button>
+                            <button
+                                class="text-xs uppercase tracking-widest font-mono text-slate-500 hover:text-primary transition-colors">Physical</button>
+                            <button
+                                class="text-xs uppercase tracking-widest font-mono text-slate-500 hover:text-primary transition-colors">Digital</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <!-- Nebbia -->
+                        <div class="group flex flex-col gap-4 relative">
+                            <div class="analog-sleeve relative w-full aspect-square overflow-hidden cursor-pointer">
+                                <img src="assets/IMG_20251002_121749.png" alt="Nebbia cover"
+                                    class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-transform duration-[3s] group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button onclick="playAlbum('Nebbia')"
+                                        class="relative size-12 rounded-full border border-white/20 flex items-center justify-center text-primary hover:text-amber-glow hover:scale-110 transition-all knob-shadow">
+                                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <h3 class="text-slate-200 text-sm font-bold uppercase tracking-widest">Nebbia</h3>
+                                <p class="text-primary/60 text-[10px] font-mono mt-1">1972 • LP</p>
+                            </div>
+                        </div>
+
+                        <!-- Sequence -->
+                        <div class="group flex flex-col gap-4 relative">
+                            <div class="analog-sleeve relative w-full aspect-square overflow-hidden cursor-pointer">
+                                <img src="assets/1746768340694.jpg" alt="Sequence cover"
+                                    class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-transform duration-[3s] group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button onclick="playAlbum('Sequence')"
+                                        class="relative size-12 rounded-full border border-white/20 flex items-center justify-center text-primary hover:text-amber-glow hover:scale-110 transition-all knob-shadow">
+                                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <h3 class="text-slate-200 text-sm font-bold uppercase tracking-widest">Sequence</h3>
+                                <p class="text-primary/60 text-[10px] font-mono mt-1">1974 • LP</p>
+                            </div>
+                        </div>
+
+                        <!-- Ganymede -->
+                        <div class="group flex flex-col gap-4 relative">
+                            <div class="analog-sleeve relative w-full aspect-square overflow-hidden cursor-pointer">
+                                <img src="assets/1746929225346.jpg" alt="Ganymede cover"
+                                    class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-transform duration-[3s] group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button onclick="playAlbum('Ganymede')"
+                                        class="relative size-12 rounded-full border border-white/20 flex items-center justify-center text-primary hover:text-amber-glow hover:scale-110 transition-all knob-shadow">
+                                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <h3 class="text-slate-200 text-sm font-bold uppercase tracking-widest">Ganymede</h3>
+                                <p class="text-primary/60 text-[10px] font-mono mt-1">1976 • EP</p>
+                            </div>
+                        </div>
+
+                        <!-- The Euclidean Sea -->
+                        <div class="group flex flex-col gap-4 relative">
+                            <div class="analog-sleeve relative w-full aspect-square overflow-hidden cursor-pointer">
+                                <img src="assets/euclidean-sea.png" alt="The Euclidean Sea cover"
+                                    class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-transform duration-[3s] group-hover:scale-110">
+                                <div
+                                    class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <button onclick="playAlbum('The Euclidean Sea')"
+                                        class="relative size-12 rounded-full border border-white/20 flex items-center justify-center text-primary hover:text-amber-glow hover:scale-110 transition-all knob-shadow">
+                                        <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col px-1">
+                                <h3 class="text-slate-200 text-sm font-bold uppercase tracking-widest">The Euclidean Sea
+                                </h3>
+                                <p class="text-primary/60 text-[10px] font-mono mt-1">1978 • LP</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="main-footer"></div>
+    </div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>

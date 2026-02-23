@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DreamSequence - Merch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
+
+    <div class="layout-container flex h-full grow flex-col">
+        <div id="main-header"></div>
+
+        <main class="flex-1 py-12 px-6">
+            <div class="max-w-7xl mx-auto">
+                <header class="mb-16">
+                    <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-glow text-mustard mb-4">
+                        Artifacts</h1>
+                    <p class="text-burnt-orange font-mono tracking-[0.3em] uppercase text-sm">Physical matter for the
+                        astral body</p>
+                    <div class="h-1 w-32 bg-burnt-orange mt-8"></div>
+                </header>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Merch Item 1 -->
+                    <div
+                        class="group flex flex-col bg-cosmic-black/40 border border-tobacco/30 p-4 rounded-sm hover:border-mustard transition-all duration-500">
+                        <div class="relative aspect-square overflow-hidden rounded-sm mb-6 bg-[#2a1a10]">
+                            <img src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG" alt="Trieste 1972 Tee"
+                                class="w-full h-full object-cover grayscale-[0.3] sepia-[0.2] group-hover:scale-110 transition-transform duration-[2s]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-cosmic-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="bg-burnt-orange text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">Limited</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3
+                                    class="text-xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Trieste '72 Heritage Tee</h3>
+                                <p class="text-xs text-[#a1887f] uppercase font-mono mt-1">Heavyweight Cotton • Vintage
+                                    Fade</p>
+                            </div>
+                            <span class="text-accent font-bold font-mono">$35</span>
+                        </div>
+                        <button
+                            onclick="addToCart('Trieste 72 Tee', 35, 'assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG')"
+                            class="w-full py-3 bg-transparent border border-mustard text-mustard hover:bg-mustard hover:text-background-dark font-bold uppercase tracking-widest transition-all">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Merch Item 2 -->
+                    <div
+                        class="group flex flex-col bg-cosmic-black/40 border border-tobacco/30 p-4 rounded-sm hover:border-mustard transition-all duration-500">
+                        <div class="relative aspect-square overflow-hidden rounded-sm mb-6 bg-[#2a1a10]">
+                            <img src="assets/1746768340694.jpg" alt="Sequence Physical Edition"
+                                class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-110 transition-transform duration-[2s]">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-cosmic-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3
+                                    class="text-xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Sequence Box Set</h3>
+                                <p class="text-xs text-[#a1887f] uppercase font-mono mt-1">Cassette + 48p Artbook •
+                                    Physical Edition</p>
+                            </div>
+                            <span class="text-accent font-bold font-mono">$42</span>
+                        </div>
+                        <button onclick="addToCart('Sequence Box Set', 42, 'assets/1746768340694.jpg')"
+                            class="w-full py-3 bg-transparent border border-mustard text-mustard hover:bg-mustard hover:text-background-dark font-bold uppercase tracking-widest transition-all">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Merch Item 3 -->
+                    <div
+                        class="group flex flex-col bg-cosmic-black/40 border border-tobacco/30 p-4 rounded-sm hover:border-mustard transition-all duration-500">
+                        <div
+                            class="relative aspect-square overflow-hidden rounded-sm mb-6 bg-[#2a1a10] flex items-center justify-center">
+                            <!-- Using a placeholder for keychain since we don't have an asset for it -->
+                            <span
+                                class="material-symbols-outlined text-8xl text-mustard/20 group-hover:scale-110 group-hover:text-mustard/40 transition-all duration-[2s]">settings_input_component</span>
+                            <div class="absolute inset-0 border border-dashed border-mustard/20 m-4"></div>
+                        </div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3
+                                    class="text-xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Voltage Knob Keychain</h3>
+                                <p class="text-xs text-[#a1887f] uppercase font-mono mt-1">Machined Aluminum • 1:1 Scale
+                                </p>
+                            </div>
+                            <span class="text-accent font-bold font-mono">$15</span>
+                        </div>
+                        <button onclick="addToCart('Voltage Keychain', 15, '')"
+                            class="w-full py-3 bg-transparent border border-mustard text-mustard hover:bg-mustard hover:text-background-dark font-bold uppercase tracking-widest transition-all">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <section class="mt-32">
+                    <div
+                        class="flex flex-col md:flex-row gap-12 items-center bg-[#2a1a10] p-12 border border-mustard/20">
+                        <div class="w-full md:w-1/3 aspect-square rounded-sm overflow-hidden shadow-2xl">
+                            <img src="assets/c6a44725-604e-43aa-baeb-ae759a1f0174.JPG" alt="Custom Synth"
+                                class="w-full h-full object-cover sepia-[.3]">
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-4xl font-black uppercase text-mustard mb-6">Custom Oscillator Units</h2>
+                            <p class="text-[#d4c5a6] mb-8 leading-relaxed">
+                                We are currently developing a limited series of point-to-point wired analog oscillators
+                                based on the original 1972 DreamSequence circuits. Each unit is housed in reclaimed
+                                walnut from the Trieste docks.
+                            </p>
+                            <p class="text-burnt-orange font-bold uppercase tracking-widest mb-8">Coming Winter 1974 /
+                                2024</p>
+                            <button
+                                class="px-10 py-4 bg-mustard text-background-dark font-bold uppercase tracking-widest hover:bg-accent transition-colors">
+                                Apply for pre-order
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <div id="main-footer"></div>
+    </div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>

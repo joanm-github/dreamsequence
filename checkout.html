@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DreamSequence - Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
+
+    <div class="layout-container flex h-full grow flex-col">
+        <div id="main-header"></div>
+
+        <main class="flex-1 py-12 px-6">
+            <div class="max-w-4xl mx-auto">
+                <header class="mb-12">
+                    <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-glow text-mustard">
+                        Checkout</h1>
+                    <p class="text-burnt-orange font-mono uppercase text-xs tracking-widest mt-2">Finalize your
+                        transmission selection</p>
+                </header>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Order Summary -->
+                    <div class="order-2 lg:order-1 space-y-8">
+                        <section class="bg-cosmic-black/40 border border-tobacco/30 p-8 rounded-sm">
+                            <h2 class="text-xl font-bold uppercase text-mustard mb-6 border-b border-tobacco/20 pb-4">
+                                Transmission Summary</h2>
+                            <div id="checkout-list" class="space-y-4">
+                                <!-- Cart items will be injected here -->
+                            </div>
+                            <div class="mt-8 border-t-2 border-dashed border-tobacco/30 pt-6">
+                                <div class="flex justify-between items-center text-xl font-black uppercase">
+                                    <span>Total Frequency</span>
+                                    <span id="checkout-total" class="text-accent text-glow">$0.00</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="p-6 border border-burnt-orange/20 bg-burnt-orange/5">
+                            <p class="text-xs text-[#a1887f] uppercase tracking-tighter leading-relaxed">
+                                * All digital signals are delivered via encoded electromagnetic waves. Physical
+                                artifacts are shipped according to local space-time constraints.
+                            </p>
+                        </section>
+                    </div>
+
+                    <!-- Payment Form -->
+                    <div class="order-1 lg:order-2">
+                        <form id="checkout-form" class="space-y-6">
+                            <div class="space-y-4">
+                                <h2 class="text-xs font-mono uppercase text-burnt-orange tracking-[0.3em]">Coordinates
+                                </h2>
+                                <input type="text" placeholder="FULL NAME" required
+                                    class="w-full bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
+                                <input type="email" placeholder="EMAIL ADDRESS" required
+                                    class="w-full bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
+                            </div>
+
+                            <div class="space-y-4 pt-4">
+                                <h2 class="text-xs font-mono uppercase text-burnt-orange tracking-[0.3em]">Payment
+                                    Signal</h2>
+                                <div class="relative">
+                                    <input type="text" placeholder="CARD NUMBER" required
+                                        class="w-full bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
+                                    <span
+                                        class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-tobacco/50">credit_card</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <input type="text" placeholder="MM/YY" required
+                                        class="w-1/2 bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
+                                    <input type="text" placeholder="CVV" required
+                                        class="w-1/2 bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-mustard text-background-dark py-6 font-black uppercase tracking-[0.2em] text-lg hover:bg-accent transition-all shadow-[0_0_20px_rgba(214,158,46,0.3)] hover:-translate-y-1 active:translate-y-0 animate-signal-pulse">
+                                Transmit Payment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="main-footer"></div>
+    </div>
+
+    <script src="components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('checkout-list');
+            const totalEl = document.getElementById('checkout-total');
+            const form = document.getElementById('checkout-form');
+            const cartItems = JSON.parse(localStorage.getItem('ds-cart')) || [];
+
+            if (cartItems.length === 0) {
+                list.innerHTML = `
+                    <div class="py-12 text-center">
+                        <span class="material-symbols-outlined text-6xl text-tobacco/30 mb-4">signal_disconnected</span>
+                        <p class="text-tobacco/50 font-mono uppercase text-xs tracking-widest">No signals found in the archives.</p>
+                        <a href="collection.html" class="inline-block mt-6 text-mustard border border-mustard/20 px-6 py-2 hover:bg-mustard hover:text-background-dark transition-all text-xs uppercase font-black">Browse Signals</a>
+                    </div>
+                `;
+                if (form) form.classList.add('opacity-50', 'pointer-events-none');
+                return;
+            }
+
+            let total = 0;
+            list.innerHTML = cartItems.map((item, idx) => {
+                total += item.price;
+                return `
+                    <div class="flex items-center gap-4 group">
+                        <div class="size-12 rounded-sm overflow-hidden border border-tobacco/30">
+                            <img src="${item.img}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-bold uppercase text-slate-200">${item.name}</h3>
+                            <p class="text-[10px] text-burnt-orange font-mono uppercase">Signal Artifact</p>
+                        </div>
+                        <span class="font-mono text-mustard mr-4 font-bold text-lg">$${item.price}</span>
+                        <button onclick="removeFromCart(${idx})" class="text-red-500/50 hover:text-red-500 transition-colors p-2" title="Remove Transmission">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            totalEl.innerText = `$${total.toFixed(2)}`;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert("SUCCESS: Payment Signal Transmitted!\n\nYour cosmic artifacts are being prepared. Check your hyperspace email for confirmation.");
+                localStorage.removeItem('ds-cart');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

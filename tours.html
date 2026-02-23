@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Signal Coordinates | DreamSequence Live Transmissions</title>
+    <meta name="description"
+        content="View historical signal coordinates and capture statistics of DreamSequence live performances.">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
+
+    <div class="layout-container flex h-full grow flex-col">
+        <div id="main-header"></div>
+
+        <main class="flex-1 py-12 px-6">
+            <div class="max-w-5xl mx-auto">
+                <header class="mb-20 text-center relative">
+                    <div class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-10 pointer-events-none">
+                        <span class="material-symbols-outlined text-[15rem]">rocket_launch</span>
+                    </div>
+                    <h1
+                        class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-glow text-mustard mb-4 relative z-10">
+                        Live Signals</h1>
+                    <p class="text-burnt-orange font-mono tracking-[0.3em] uppercase text-sm mb-8">Tour Archive: 1973 -
+                        1978</p>
+                    <div class="h-1 w-32 bg-burnt-orange mx-auto"></div>
+                </header>
+
+                <div class="space-y-6">
+                    <!-- Milano -->
+                    <div
+                        class="group flex flex-col md:flex-row items-center justify-between p-6 bg-cosmic-black/40 border border-tobacco/30 rounded-sm hover:border-mustard transition-all duration-300 hover:bg-cosmic-black/60 relative overflow-hidden">
+                        <div
+                            class="absolute left-0 top-0 w-1 h-full bg-burnt-orange scale-y-0 group-hover:scale-y-100 transition-transform origin-top">
+                        </div>
+                        <div class="flex items-center gap-8 w-full md:w-auto">
+                            <div onclick="showModal('assets/43666591-6746-419f-ad33-be12eda7284e.JPG')"
+                                class="relative size-20 rounded-sm overflow-hidden cursor-pointer border border-mustard/20 hover:scale-105 transition-transform shrink-0">
+                                <img src="assets/43666591-6746-419f-ad33-be12eda7284e.JPG" alt="Milano Poster"
+                                    class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all">
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-accent">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3
+                                    class="text-2xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Milan</h3>
+                                <p class="text-slate-500 uppercase text-xs tracking-widest">Teatro Lirico • Dec 07, 1973
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-6 mt-6 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+                            <button onclick="showModal('assets/43666591-6746-419f-ad33-be12eda7284e.JPG')"
+                                class="px-6 py-2 border border-mustard/50 text-mustard uppercase font-mono text-xs tracking-widest hover:bg-mustard hover:text-background-dark transition-all">
+                                View Poster
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Scandinavia -->
+                    <div
+                        class="group flex flex-col md:flex-row items-center justify-between p-6 bg-cosmic-black/40 border border-tobacco/30 rounded-sm hover:border-mustard transition-all duration-300 hover:bg-cosmic-black/60 relative overflow-hidden">
+                        <div
+                            class="absolute left-0 top-0 w-1 h-full bg-mustard scale-y-0 group-hover:scale-y-100 transition-transform origin-top">
+                        </div>
+                        <div class="flex items-center gap-8 w-full md:w-auto">
+                            <div onclick="showModal('assets/fde3fff5-7f0c-4aed-9cef-6e77894c5233.JPG')"
+                                class="relative size-20 rounded-sm overflow-hidden cursor-pointer border border-mustard/20 hover:scale-105 transition-transform shrink-0">
+                                <img src="assets/fde3fff5-7f0c-4aed-9cef-6e77894c5233.JPG" alt="Scandinavia Poster"
+                                    class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all">
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-accent">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3
+                                    class="text-2xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Scandinavia Tour</h3>
+                                <p class="text-slate-500 uppercase text-xs tracking-widest">Copenhagen • Stockholm •
+                                    Oslo • 1975</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-6 mt-6 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+                            <button onclick="showModal('assets/fde3fff5-7f0c-4aed-9cef-6e77894c5233.JPG')"
+                                class="px-6 py-2 border border-mustard/50 text-mustard uppercase font-mono text-xs tracking-widest hover:bg-mustard hover:text-background-dark transition-all">
+                                View Poster
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Brussels -->
+                    <div
+                        class="group flex flex-col md:flex-row items-center justify-between p-6 bg-cosmic-black/40 border border-tobacco/30 rounded-sm hover:border-mustard transition-all duration-300 hover:bg-cosmic-black/60 relative overflow-hidden">
+                        <div
+                            class="absolute left-0 top-0 w-1 h-full bg-burnt-orange scale-y-0 group-hover:scale-y-100 transition-transform origin-top">
+                        </div>
+                        <div class="flex items-center gap-8 w-full md:w-auto">
+                            <div onclick="showModal('assets/e5a7a599-d7f9-4e46-9989-02504bd40585.JPG')"
+                                class="relative size-20 rounded-sm overflow-hidden cursor-pointer border border-mustard/20 hover:scale-105 transition-transform shrink-0">
+                                <img src="assets/e5a7a599-d7f9-4e46-9989-02504bd40585.JPG" alt="Brussels Poster"
+                                    class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all">
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-accent">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3
+                                    class="text-2xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Brussels</h3>
+                                <p class="text-slate-500 uppercase text-xs tracking-widest">Ancienne Belgique (AB) • Feb
+                                    03, 1976</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-6 mt-6 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+                            <button onclick="showModal('assets/e5a7a599-d7f9-4e46-9989-02504bd40585.JPG')"
+                                class="px-6 py-2 border border-mustard/50 text-mustard uppercase font-mono text-xs tracking-widest hover:bg-mustard hover:text-background-dark transition-all">
+                                View Poster
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Australasian -->
+                    <div
+                        class="group flex flex-col md:flex-row items-center justify-between p-6 bg-cosmic-black/40 border border-tobacco/30 rounded-sm hover:border-mustard transition-all duration-300 hover:bg-cosmic-black/60 relative overflow-hidden">
+                        <div
+                            class="absolute left-0 top-0 w-1 h-full bg-burnt-orange scale-y-0 group-hover:scale-y-100 transition-transform origin-top">
+                        </div>
+                        <div class="flex items-center gap-8 w-full md:w-auto">
+                            <div onclick="showModal('assets/38722aad-8750-4472-b623-5187219f03ae.JPG')"
+                                class="relative size-20 rounded-sm overflow-hidden cursor-pointer border border-mustard/20 hover:scale-105 transition-transform shrink-0">
+                                <img src="assets/38722aad-8750-4472-b623-5187219f03ae.JPG" alt="Australasian Poster"
+                                    class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all">
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-accent">zoom_in</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3
+                                    class="text-2xl font-bold uppercase text-mustard group-hover:text-accent transition-colors">
+                                    Australasian Tour</h3>
+                                <p class="text-slate-500 uppercase text-xs tracking-widest">Sydney • Melbourne •
+                                    Auckland • 1978</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-6 mt-6 md:mt-0 w-full md:w-auto justify-between md:justify-end">
+                            <button onclick="showModal('assets/38722aad-8750-4472-b623-5187219f03ae.JPG')"
+                                class="px-6 py-2 border border-mustard/50 text-mustard uppercase font-mono text-xs tracking-widest hover:bg-mustard hover:text-background-dark transition-all">
+                                View Poster
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="mt-32 pt-20 border-t border-white/5">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-mono text-burnt-orange uppercase tracking-[.3em]">Total
+                                Signals</span>
+                            <span class="text-5xl font-black text-mustard tracking-tighter">142</span>
+                            <p class="text-[10px] text-slate-500 uppercase mt-2">Captured on magnetic tape</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-mono text-burnt-orange uppercase tracking-[.3em]">Coded
+                                Cities</span>
+                            <span class="text-5xl font-black text-mustard tracking-tighter">28</span>
+                            <p class="text-[10px] text-slate-500 uppercase mt-2">Across the European transit</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-xs font-mono text-burnt-orange uppercase tracking-[.3em]">Voltage
+                                Variance</span>
+                            <span class="text-5xl font-black text-mustard tracking-tighter">98.4%</span>
+                            <p class="text-[10px] text-slate-500 uppercase mt-2">Optimal oscillation reached</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <div id="main-footer"></div>
+    </div>
+
+    <script src="components.js"></script>
+</body>
+
+</html>
