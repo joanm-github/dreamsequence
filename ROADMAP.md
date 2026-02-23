@@ -18,8 +18,13 @@
 - [x] Actualización de discografía (The Euclidean Sea) y Galería con fotos reales.
 
 ### 2. Lanzamiento
-- [ ] Configurar dominio y despliegue.
-- [ ] SEO y Meta tags.
+- [x] SEO y Meta tags.
+- [x] Configurar repositorio y despliegue en GitHub Pages.
+
+## 📡 Próximas Ondas (Sugerencias)
+- [ ] **Boletín de Señales**: Formulario de suscripción estilo terminal para recibir actualizaciones de archivo.
+- [ ] **Pre-escucha Atmosférica**: Pequeño reproductor de audio con ruido blanco y fragmentos de sintetizador al navegar.
+- [ ] **Mapa de Transmisión**: Mapa interactivo de los "Live Signals" usando coordenadas reales de las giras.
 
 ---
 *Este documento se actualizará conforme avance el proyecto.*
