@@ -42,66 +42,65 @@
                 <!-- Transmission Map Section -->
                 <section class="mb-20">
                     <div
-                        class="relative w-full aspect-[16/9] bg-cosmic-black/60 border border-tobacco/30 rounded-sm overflow-hidden map-grid group/map">
+                        class="relative w-full aspect-[16/9] bg-cosmic-black/60 border border-tobacco/30 rounded-sm overflow-hidden group/map">
+
+                        <!-- Technical Blueprint Background -->
+                        <img src="assets/europe-map.png" alt="European Technical Blueprint"
+                            class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen grayscale-[0.2] contrast-125">
+
+                        <div class="absolute inset-0 map-grid opacity-30"></div>
                         <div class="map-scanner"></div>
 
                         <!-- Map Decorative Elements -->
-                        <div class="absolute top-4 left-4 font-mono text-[10px] text-mustard/40 leading-tight">
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-mustard/60 leading-tight bg-background-dark/40 p-2 backdrop-blur-sm border border-white/5">
                             SIGNAL TRACKER V.72.1<br>
                             OSCILLOSCOPE: ACTIVE<br>
                             TARGET: EUROPEAN TRANSIT
                         </div>
                         <div
-                            class="absolute bottom-4 right-4 font-mono text-[10px] text-mustard/40 text-right uppercase">
+                            class="absolute bottom-4 right-4 font-mono text-[10px] text-mustard/60 text-right uppercase bg-background-dark/40 p-2 backdrop-blur-sm border border-white/5">
                             Coordinates Locked<br>
                             Trieste Origin: 45.64N 13.76E
                         </div>
 
-                        <!-- Stylized Europe SVG (Simplified Path) -->
-                        <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 100 100"
-                            preserveAspectRatio="xMidYMid slice">
-                            <path
-                                d="M25,30 Q30,20 40,25 T50,20 T60,30 T55,40 T65,50 T60,65 T50,70 T40,65 T30,55 T25,45 Z"
-                                fill="none" stroke="#d69e2e" stroke-width="0.5" stroke-dasharray="2,2" />
-                        </svg>
-
                         <!-- Signal Points -->
                         <div class="absolute inset-0">
                             <!-- Milan (1973) -->
-                            <div class="absolute top-[63%] left-[42%] group/point" title="Milan Signal - 1973">
+                            <div class="absolute top-[62%] left-[48%] group/point" title="Milan Signal - 1973">
                                 <div class="relative">
                                     <div class="absolute -inset-2 bg-accent/20 rounded-full map-ping"></div>
                                     <div class="size-2 bg-accent rounded-full border border-white/20 relative z-10">
                                     </div>
                                     <span
-                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 px-1 border border-mustard/20">MILAN_73</span>
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 backdrop-blur-sm px-1 border border-mustard/20">MILAN_73</span>
                                 </div>
                             </div>
 
                             <!-- Scandinavia (1975) -->
-                            <div class="absolute top-[35%] left-[46%] group/point" title="Scandinavia Signal - 1975">
+                            <div class="absolute top-[28%] left-[58%] group/point" title="Scandinavia Signal - 1975">
                                 <div class="relative">
                                     <div class="absolute -inset-2 bg-mustard/20 rounded-full map-ping"></div>
                                     <div class="size-2 bg-mustard rounded-full border border-white/20 relative z-10">
                                     </div>
                                     <span
-                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 px-1 border border-mustard/20">SCANDI_75</span>
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 backdrop-blur-sm px-1 border border-mustard/20">SCANDI_75</span>
                                 </div>
                             </div>
 
                             <!-- Brussels (1976) -->
-                            <div class="absolute top-[48%] left-[38%] group/point" title="Brussels Signal - 1976">
+                            <div class="absolute top-[48%] left-[43%] group/point" title="Brussels Signal - 1976">
                                 <div class="relative">
                                     <div class="absolute -inset-2 bg-accent/20 rounded-full map-ping"></div>
                                     <div class="size-2 bg-accent rounded-full border border-white/20 relative z-10">
                                     </div>
                                     <span
-                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 px-1 border border-mustard/20">BRUSSELS_76</span>
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[8px] font-mono text-mustard opacity-0 group-hover/point:opacity-100 transition-opacity bg-background-dark/80 backdrop-blur-sm px-1 border border-mustard/20">BRUSSELS_76</span>
                                 </div>
                             </div>
 
                             <!-- Trieste Origin -->
-                            <div class="absolute top-[62%] left-[48%] group/point" title="Trieste Base Station">
+                            <div class="absolute top-[62%] left-[53%] group/point" title="Trieste Base Station">
                                 <div class="relative">
                                     <div
                                         class="size-2 bg-white rounded-full border border-mustard/50 relative z-10 animate-pulse">
