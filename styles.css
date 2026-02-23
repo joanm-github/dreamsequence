@@ -6,6 +6,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+.protected-photo {
+    pointer-events: none;
+}
+
 /* Custom Utilities */
 .text-glow {
     text-shadow: 0 0 10px rgba(192, 86, 33, 0.5), 0 0 20px rgba(214, 158, 46, 0.3);
