@@ -43,8 +43,8 @@
                             </div>
                             <div class="mt-8 border-t-2 border-dashed border-tobacco/30 pt-6">
                                 <div class="flex justify-between items-center text-xl font-black uppercase">
-                                    <span>Total Frequency</span>
-                                    <span id="checkout-total" class="text-accent text-glow">$0.00</span>
+                                    <span>Total Frecuencia</span>
+                                    <span id="checkout-total" class="text-accent text-glow">0.00€</span>
                                 </div>
                             </div>
                         </section>
@@ -61,8 +61,8 @@
                     <div class="order-1 lg:order-2">
                         <form id="checkout-form" class="space-y-6">
                             <div class="space-y-4">
-                                <h2 class="text-xs font-mono uppercase text-burnt-orange tracking-[0.3em]">Coordinates
-                                </h2>
+                                <h2 class="text-xs font-mono uppercase text-burnt-orange tracking-[0.3em]">Coordenadas
+                                    de Envío</h2>
                                 <input type="text" placeholder="FULL NAME" required
                                     class="w-full bg-cosmic-black/60 border border-tobacco p-4 focus:border-mustard outline-none text-mustard font-mono text-sm uppercase">
                                 <input type="email" placeholder="EMAIL ADDRESS" required
@@ -131,19 +131,19 @@
                             <h3 class="text-sm font-bold uppercase text-slate-200">${item.name}</h3>
                             <p class="text-[10px] text-burnt-orange font-mono uppercase">Signal Artifact</p>
                         </div>
-                        <span class="font-mono text-mustard mr-4 font-bold text-lg">$${item.price}</span>
-                        <button onclick="removeFromCart(${idx})" class="text-red-500/50 hover:text-red-500 transition-colors p-2" title="Remove Transmission">
+                        <span class="font-mono text-mustard mr-4 font-bold text-lg">${item.price}€</span>
+                        <button onclick="removeFromCart(${idx})" class="text-red-500/50 hover:text-red-500 transition-colors p-2" title="Eliminar Transmisión">
                             <span class="material-symbols-outlined text-lg">delete</span>
                         </button>
                     </div>
                 `;
             }).join('');
 
-            totalEl.innerText = `$${total.toFixed(2)}`;
+            totalEl.innerText = `${total.toFixed(2)}€`;
 
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-                alert("SUCCESS: Payment Signal Transmitted!\n\nYour cosmic artifacts are being prepared. Check your hyperspace email for confirmation.");
+                alert("ÉXITO: ¡Señal de Pago Transmitida!\n\nTus artefactos cósmicos están siendo preparados. Revisa tu correo para la confirmación.");
                 localStorage.removeItem('ds-cart');
                 window.location.href = 'index.html';
             });
