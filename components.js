@@ -5,7 +5,7 @@ const Header = () => `
             <div class="size-12 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
                 <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
             </div>
-            <h2 class="text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard">DreamSequence</h2>
+            <h2 class="text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard">Dream Sequence</h2>
         </a>
         
         <nav class="hidden md:flex items-center gap-8">
