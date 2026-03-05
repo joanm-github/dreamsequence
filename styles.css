@@ -16,6 +16,44 @@ img {
     pointer-events: none;
 }
 
+/* Responsive Refinements */
+:root {
+    --container-px: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-px: 2.5rem;
+    }
+}
+
+.layout-container {
+    padding-left: var(--container-px);
+    padding-right: var(--container-px);
+}
+
+/* Fluid Typography for large headings */
+h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: clamp(1, 1.1, 1.2);
+}
+
+.text-8xl {
+    font-size: clamp(3rem, 12vw, 8rem);
+}
+
+.text-7xl {
+    font-size: clamp(2.5rem, 10vw, 7rem);
+}
+
+.text-6xl {
+    font-size: clamp(2.25rem, 8vw, 6rem);
+}
+
+.text-5xl {
+    font-size: clamp(2rem, 6vw, 5rem);
+}
+
 /* Custom Utilities */
 .text-glow {
     text-shadow: 0 0 10px rgba(192, 86, 33, 0.5), 0 0 20px rgba(214, 158, 46, 0.3);
@@ -267,4 +305,19 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #dcb14a;
+}
+
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+/* Mobile Image Adjustments */
+@media (max-width: 640px) {
+    .photo-frame {
+        transform: rotate(0) !important;
+        margin-bottom: 2rem;
+    }
 }
