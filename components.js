@@ -39,10 +39,10 @@ const Header = () => `
         
         <div class="relative h-full flex flex-col px-10 pt-48 pb-16 safe-area-inset overflow-y-auto">
             <nav class="flex flex-col gap-8 md:gap-12">
-                <a class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
-                <a class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
-                <a class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
-                <a class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
+                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
+                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
+                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
+                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
             </nav>
             
             <div class="mt-auto pt-20 flex flex-col gap-8">
@@ -226,7 +226,8 @@ const initScrollReveal = () => {
 
 // Injection Logic
 document.addEventListener('DOMContentLoaded', () => {
-    // Add professional visual layers
+    /* CRT and Noise layers disabled per user request for clarity */
+    /*
     if (!document.querySelector('.analog-noise')) {
         const noise = document.createElement('div');
         noise.className = 'analog-noise';
@@ -237,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scanlines.className = 'crt-scanlines';
         document.body.appendChild(scanlines);
     }
+    */
 
     const headerEl = document.getElementById('main-header');
     if (headerEl) {

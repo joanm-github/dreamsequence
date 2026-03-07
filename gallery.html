@@ -19,9 +19,6 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-tobacco dark:text-[#f3e5ab] font-display overflow-x-hidden">
-    <div class="fixed inset-0 z-50 pointer-events-none opacity-30 bg-noise mix-blend-overlay"></div>
-    <div class="fixed inset-0 z-50 pointer-events-none opacity-15 crt-overlay"></div>
-
     <div class="layout-container flex h-full grow flex-col">
         <div id="main-header"></div>
 
@@ -32,188 +29,151 @@
                         class="text-5xl md:text-8xl font-black uppercase tracking-tighter text-glow text-mustard leading-none">
                         Photographic Archives</h1>
                     <p class="text-burnt-orange font-mono uppercase text-sm tracking-[0.4em] mt-6">Captured on 35mm film
-                        • 1972-1980</p>
+                        • Archive Transmission DS-72</p>
                 </header>
 
-                <!-- Era 1: 1972 - 1974 -->
-                <section class="mb-32">
-                    <div class="flex items-center gap-4 mb-12 reveal">
-                        <h2 class="text-4xl font-black uppercase tracking-tighter text-mustard">Phase I: Trieste
-                            Sessions</h2>
-                        <div class="h-px flex-1 bg-gradient-to-r from-mustard/30 to-transparent"></div>
-                        <span class="text-xs font-mono text-burnt-orange uppercase tracking-[0.3em]">1972 — 1974</span>
+                <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+                    <!-- Photo 1 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1763034593110-01.jpeg')">
+                        <img src="assets/galery/1763034593110-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Photo 1 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/2af12404-fb23-490f-a09b-b21768b307fc.JPG')">
-                            <img src="assets/2af12404-fb23-490f-a09b-b21768b307fc.JPG" alt="Trieste Studio"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest">Trieste Studio •
-                                    Recording "Nebbia"</p>
-                            </div>
-                        </div>
-                        <!-- Photo 2 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/691e55f2-0bc4-438b-8d48-ead984704f85.JPG')">
-                            <img src="assets/691e55f2-0bc4-438b-8d48-ead984704f85.JPG" alt="Sofia Tape Loops"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest"> Sofia • Tape
-                                    Loop Experiments</p>
-                            </div>
-                        </div>
-                        <!-- Photo 3 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/Sofia Martini.JPG')">
-                            <img src="assets/Sofia Martini.JPG" alt="Sofia Martini"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest">Sofia Martini •
-                                    Original Portrait</p>
-                            </div>
-                        </div>
-                        <!-- Photo 4 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/Elena Leitner.JPG')">
-                            <img src="assets/Elena Leitner.JPG" alt="Elena Leitner"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest">Elena Leitner •
-                                    Analog Section</p>
-                            </div>
-                        </div>
-                        <!-- Photo 5 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/Giulia Leitner.JPG')">
-                            <img src="assets/Giulia Leitner.JPG" alt="Giulia Leitner"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest">Giulia Leitner •
-                                    Frequency Control</p>
-                            </div>
-                        </div>
-                        <!-- Photo 6 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/38722aad-8750-4472-b623-5187219f03ae.JPG')">
-                            <img src="assets/38722aad-8750-4472-b623-5187219f03ae.JPG" alt="Studio Gear"
-                                class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                                <p class="text-[10px] font-mono text-mustard uppercase tracking-widest">Modular Routing
-                                    • 1973</p>
-                            </div>
-                        </div>
+                    <!-- Photo 2 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1763068784842.jpg')">
+                        <img src="assets/galery/1763068784842.jpg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
                     </div>
-                </section>
+                    <!-- Photo 3 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1763416588925-01(1).jpeg')">
+                        <img src="assets/galery/1763416588925-01(1).jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 4 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1763416588925-01.jpeg')">
+                        <img src="assets/galery/1763416588925-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 5 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1764796470818-01.jpeg')">
+                        <img src="assets/galery/1764796470818-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 6 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1765458420309-01.jpeg')">
+                        <img src="assets/galery/1765458420309-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 7 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1765469115984-01.jpeg')">
+                        <img src="assets/galery/1765469115984-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 8 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1765480466901-01.jpeg')">
+                        <img src="assets/galery/1765480466901-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 9 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1766964703971-01.jpeg')">
+                        <img src="assets/galery/1766964703971-01.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 10 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1769497796043 (1).png')">
+                        <img src="assets/galery/1769497796043 (1).png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 11 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1770759744113 (1) (1).png')">
+                        <img src="assets/galery/1770759744113 (1) (1).png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 12 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1772035346519.png')">
+                        <img src="assets/galery/1772035346519.png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 13 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/1772709773274.png')">
+                        <img src="assets/galery/1772709773274.png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 14: Elena -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/Elena-play.jpeg')">
+                        <img src="assets/galery/Elena-play.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 15: Giulia -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/Giulia-play.jpeg')">
+                        <img src="assets/galery/Giulia-play.jpeg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 16 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/IMG_20251211_203610.jpg')">
+                        <img src="assets/galery/IMG_20251211_203610.jpg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 17 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/IMG_20251214_044710.jpg')">
+                        <img src="assets/galery/IMG_20251214_044710.jpg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 18 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/IMG_20260102_180826.png')">
+                        <img src="assets/galery/IMG_20260102_180826.png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 19 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/IMG_20260222_140502_719.webp')">
+                        <img src="assets/galery/IMG_20260222_140502_719.webp"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 20: Sofia -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/Sofia-play.jpg')">
+                        <img src="assets/galery/Sofia-play.jpg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 21 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/Théâtre de la Commune 1977 Paris.png')">
+                        <img src="assets/galery/Théâtre de la Commune 1977 Paris.png"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Photo 22 -->
+                    <div class="break-inside-avoid photo-frame-dark group cursor-pointer overflow-hidden reveal"
+                        onclick="showModal('assets/galery/sisters.jpg')">
+                        <img src="assets/galery/sisters.jpg"
+                            class="w-full h-auto grayscale opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
 
-                <!-- Era 2: 1975 - 1980 -->
-                <section class="mb-32">
-                    <div class="flex items-center gap-4 mb-12 reveal">
-                        <h2 class="text-4xl font-black uppercase tracking-tighter text-mustard">Phase II: European
-                            Transit</h2>
-                        <div class="h-px flex-1 bg-gradient-to-r from-mustard/30 to-transparent"></div>
-                        <span class="text-xs font-mono text-burnt-orange uppercase tracking-[0.3em]">1975 — 1980</span>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG')">
-                            <img src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/90328044-370e-4dc6-848e-408ddfa3e2a9.JPG')">
-                            <img src="assets/90328044-370e-4dc6-848e-408ddfa3e2a9.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/035eb99c-dcf9-447e-bbc6-7f73febb771e.JPG')">
-                            <img src="assets/035eb99c-dcf9-447e-bbc6-7f73febb771e.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/935bc4fe-7e7c-42d1-aaf7-741766936577.JPG')">
-                            <img src="assets/935bc4fe-7e7c-42d1-aaf7-741766936577.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/eafacfce-3d62-49ae-b361-75c006630d0f.JPG')">
-                            <img src="assets/eafacfce-3d62-49ae-b361-75c006630d0f.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/f335f30e-48ea-43b0-83b0-521b0534a003.JPG')">
-                            <img src="assets/f335f30e-48ea-43b0-83b0-521b0534a003.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/Ellena-play.JPG')">
-                            <img src="assets/Ellena-play.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/Giulia-play.JPG')">
-                            <img src="assets/Giulia-play.JPG"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Era 3: Studio Snapshots -->
-                <section class="mb-32">
-                    <div class="flex items-center gap-4 mb-12 reveal">
-                        <h2 class="text-4xl font-black uppercase tracking-tighter text-mustard">Studio Snapshots</h2>
-                        <div class="h-px flex-1 bg-gradient-to-r from-mustard/30 to-transparent"></div>
-                        <span class="text-xs font-mono text-burnt-orange uppercase tracking-[0.3em]">Candid Files</span>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                        <!-- Photo Snapshot 1 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/PHOTO-2026-01-30-23-06-51.jpg')">
-                            <img src="assets/PHOTO-2026-01-30-23-06-51.jpg" alt="Snapshot 1"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <!-- Photo Snapshot 2 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/PHOTO-2026-02-06-16-12-08.jpg')">
-                            <img src="assets/PHOTO-2026-02-06-16-12-08.jpg" alt="Snapshot 2"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <!-- Photo Snapshot 3 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/PHOTO-2026-02-06-16-12-55.jpg')">
-                            <img src="assets/PHOTO-2026-02-06-16-12-55.jpg" alt="Snapshot 3"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <!-- Photo Snapshot 4 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/PHOTO-2026-02-09-15-32-21.jpg')">
-                            <img src="assets/PHOTO-2026-02-09-15-32-21.jpg" alt="Snapshot 4"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                        <!-- Photo Snapshot 5 -->
-                        <div class="group relative cursor-pointer overflow-hidden photo-frame-dark aspect-square reveal"
-                            onclick="showModal('assets/PHOTO-2026-03-03-19-59-20.jpg')">
-                            <img src="assets/PHOTO-2026-03-03-19-59-20.jpg" alt="Snapshot 5"
-                                class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
-                        </div>
-                    </div>
-                </section>
+                <div class="mt-24 text-center">
+                    <p class="text-[#a1887f] uppercase tracking-[0.2em] text-xs">End of archive file.</p>
+                </div>
             </div>
+        </main>
 
-            <div class="mt-24 text-center">
-                <p class="text-[#a1887f] uppercase tracking-[0.2em] text-xs">End of archive file.</p>
-            </div>
-    </div>
-    </main>
-
-    <div id="main-footer"></div>
+        <div id="main-footer"></div>
     </div>
 
     <script src="components.js"></script>
