@@ -161,7 +161,7 @@ const VisitorCounter = () => {
     localStorage.setItem('ds-visits', visits);
     const digits = visits.toString().padStart(6, '0').split('');
     return `
-    <div class="retro-counter-container hidden md:flex">
+    <div class="retro-counter-container flex">
         <span class="text-[7px] font-mono text-mustard/40 uppercase tracking-[0.4em] mb-1">Archival Access Count</span>
         <div class="retro-counter-display">
             ${digits.map(d => `<div class="retro-counter-digit">${d}</div>`).join('')}
