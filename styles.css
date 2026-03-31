@@ -594,41 +594,59 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(10, 10, 10, 0.7);
-    border: 1px solid rgba(214, 158, 46, 0.3);
+    width: 44px;
+    height: 44px;
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(214, 158, 46, 0.4);
     color: #eab308;
-    display: none;
+    display: none; /* Controlled by is-active and hover */
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(8px);
     border-radius: 4px;
+    opacity: 0;
 }
 
 .carousel-btn:hover {
-    background: rgba(214, 158, 46, 0.2);
+    background: rgba(214, 158, 46, 0.3);
     border-color: #eab308;
-    box-shadow: 0 0 15px rgba(234, 179, 8, 0.3);
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+    transform: translateY(-50%) scale(1.1);
 }
 
 @media (min-width: 768px) {
-    .carousel-wrapper:hover .carousel-btn {
+    .carousel-wrapper:hover .carousel-btn.is-active {
         display: flex;
+        opacity: 1;
+    }
+}
+
+/* Mobile: always show if active, but with lower opacity or smaller size? 
+   Actually, carousels are usually better with touch on mobile, 
+   but showing them helps discoverability. 
+   Let's show them slightly on mobile if active.
+*/
+@media (max-width: 767px) {
+    .carousel-btn.is-active {
+        display: flex;
+        opacity: 0.6;
+        width: 36px;
+        height: 36px;
+        background: rgba(10, 10, 10, 0.5);
     }
 }
 
 .carousel-btn.btn-left {
-    left: -20px;
+    left: -10px;
 }
 
 .carousel-btn.btn-right {
-    right: -20px;
+    right: -10px;
 }
 
 .carousel-btn .material-symbols-outlined {
-    font-size: 24px;
+    font-size: 28px;
 }

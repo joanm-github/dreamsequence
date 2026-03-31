@@ -426,6 +426,40 @@
             container.scrollBy({ left: distance, behavior: 'smooth' });
         }
 
+        function updateButtons(id) {
+            const container = document.getElementById(id);
+            if (!container) return;
+            const wrapper = container.parentElement;
+            const btnLeft = wrapper.querySelector('.btn-left');
+            const btnRight = wrapper.querySelector('.btn-right');
+            
+            if (btnLeft) {
+                if (container.scrollLeft > 10) btnLeft.classList.add('is-active');
+                else btnLeft.classList.remove('is-active');
+            }
+            
+            if (btnRight) {
+                const canScrollRight = container.scrollWidth > (container.clientWidth + container.scrollLeft + 10);
+                if (canScrollRight) btnRight.classList.add('is-active');
+                else btnRight.classList.remove('is-active');
+            }
+        }
+
+        // Initialize all carousels
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.carousel-container');
+            carousels.forEach(container => {
+                container.addEventListener('scroll', () => updateButtons(container.id));
+                // Initial check after layout is stable
+                setTimeout(() => updateButtons(container.id), 500);
+            });
+        });
+
+        // Update on resize
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.carousel-container').forEach(c => updateButtons(c.id));
+        });
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
