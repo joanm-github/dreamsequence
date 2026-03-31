@@ -171,10 +171,10 @@ const Footer = () => `
             </a>
             
             <!-- Partner Logos -->
-            <div class="flex items-center gap-6 ml-4">
+            <div class="flex items-center gap-8 ml-4">
                 <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all">
-                <a href="https://animanera.net/" target="_blank" class="flex items-center group">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-16 md:h-24 w-auto opacity-70 group-hover:opacity-100 transition-all mix-blend-screen">
+                <a href="https://animanera.net/" target="_blank" class="flex items-center group -translate-y-1">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-20 md:h-28 w-auto opacity-70 group-hover:opacity-100 transition-all mix-blend-screen">
                 </a>
             </div>
         </div>
