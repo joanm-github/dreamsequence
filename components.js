@@ -170,11 +170,9 @@ const Footer = () => `
                 </div>
             </a>
             
-            <!-- Partner Logos -->
-            <div class="flex items-center gap-6 md:ml-6 md:border-l md:border-mustard/20 md:pl-8">
-                <img src="assets/logos/anima_negre.png" alt="Anima" class="h-5 md:h-7 w-auto opacity-80 invert transition-all">
-                <img src="assets/logos/suoni_rari.png" alt="Suoni Rari" class="h-5 md:h-7 w-auto opacity-80 invert transition-all">
-                <img src="assets/logos/loontani_tapes.jpg" alt="Loontani" class="h-6 md:h-8 w-auto opacity-80 grayscale transition-all rounded-sm">
+            <!-- Partner Logo -->
+            <div class="flex items-center md:ml-4 md:border-l md:border-mustard/20 md:pl-6">
+                <img src="assets/logos/suoni_rari.png" alt="Suoni Rari" class="h-6 md:h-10 w-auto opacity-90 invert transition-all">
             </div>
         </div>
 
