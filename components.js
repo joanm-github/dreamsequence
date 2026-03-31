@@ -174,7 +174,7 @@ const Footer = () => `
             <div class="flex items-center gap-6 ml-4">
                 <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all">
                 <a href="https://animanera.net/" target="_blank" class="flex items-center group">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-8 md:h-12 w-auto opacity-60 group-hover:opacity-100 transition-all filter grayscale hover:grayscale-0">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-16 md:h-24 w-auto opacity-70 group-hover:opacity-100 transition-all mix-blend-screen">
                 </a>
             </div>
         </div>
