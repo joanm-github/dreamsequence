@@ -465,36 +465,55 @@
         function updateButtons(id) {
             const container = document.getElementById(id);
             if (!container) return;
-            const wrapper = container.parentElement;
+            const wrapper = container.closest('.carousel-wrapper');
+            if (!wrapper) return;
             const btnLeft = wrapper.querySelector('.btn-left');
             const btnRight = wrapper.querySelector('.btn-right');
 
+            const scrollLeft = Math.ceil(container.scrollLeft);
+            const scrollWidth = container.scrollWidth;
+            const clientWidth = container.clientWidth;
+
             if (btnLeft) {
-                if (container.scrollLeft > 10) btnLeft.classList.add('is-active');
-                else btnLeft.classList.remove('is-active');
+                if (scrollLeft > 5) {
+                    btnLeft.classList.add('is-active');
+                } else {
+                    btnLeft.classList.remove('is-active');
+                }
             }
 
             if (btnRight) {
-                const canScrollRight = container.scrollWidth > (container.clientWidth + container.scrollLeft + 10);
-                if (canScrollRight) btnRight.classList.add('is-active');
-                else btnRight.classList.remove('is-active');
+                if (scrollWidth > (clientWidth + scrollLeft + 5)) {
+                    btnRight.classList.add('is-active');
+                } else {
+                    btnRight.classList.remove('is-active');
+                }
             }
         }
 
-        // Initialize all carousels
-        document.addEventListener('DOMContentLoaded', () => {
+        function initCarousels() {
             const carousels = document.querySelectorAll('.carousel-container');
             carousels.forEach(container => {
-                container.addEventListener('scroll', () => updateButtons(container.id));
-                // Initial check after layout is stable
-                setTimeout(() => updateButtons(container.id), 500);
+                // Ensure id exists
+                if (!container.id) container.id = 'carousel-' + Math.random().toString(36).substr(2, 9);
+                
+                container.addEventListener('scroll', () => updateButtons(container.id), { passive: true });
+                updateButtons(container.id);
             });
-        });
+        }
 
-        // Update on resize
+        // Run on multiple events to be sure
+        window.addEventListener('load', initCarousels);
+        if (document.readyState === 'complete') initCarousels();
+        else document.addEventListener('DOMContentLoaded', initCarousels);
         window.addEventListener('resize', () => {
             document.querySelectorAll('.carousel-container').forEach(c => updateButtons(c.id));
         });
+
+        // Periodic safety check
+        setInterval(() => {
+            document.querySelectorAll('.carousel-container').forEach(c => updateButtons(c.id));
+        }, 2000);
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();

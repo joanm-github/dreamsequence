@@ -618,24 +618,23 @@ h1 {
 }
 
 @media (min-width: 768px) {
-    .carousel-wrapper:hover .carousel-btn.is-active {
+    .carousel-btn.is-active {
         display: flex;
+        opacity: 0.3;
+    }
+    .carousel-wrapper:hover .carousel-btn.is-active {
         opacity: 1;
     }
 }
 
-/* Mobile: always show if active, but with lower opacity or smaller size? 
-   Actually, carousels are usually better with touch on mobile, 
-   but showing them helps discoverability. 
-   Let's show them slightly on mobile if active.
-*/
+/* Mobile: show more clearly if active */
 @media (max-width: 767px) {
     .carousel-btn.is-active {
         display: flex;
-        opacity: 0.6;
+        opacity: 0.8;
         width: 36px;
         height: 36px;
-        background: rgba(10, 10, 10, 0.5);
+        background: rgba(10, 10, 10, 0.7);
     }
 }
 
