@@ -159,16 +159,24 @@ const initOscilloscope = () => {
 const Footer = () => `
 <footer class="mt-auto border-t border-mustard/10 bg-background-dark py-8 px-6 mb-24 md:mb-0 reveal">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <!-- Logo & Name -->
-        <a href="index.html" class="flex items-center gap-4 group">
-            <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform">
-                <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform">
+                    <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black tracking-tight text-mustard uppercase leading-none">DreamSequence</span>
+                    <span class="text-[8px] text-burnt-orange font-mono mt-1 uppercase tracking-widest opacity-70">Trieste • Since 1972</span>
+                </div>
+            </a>
+            
+            <!-- Partner Logos -->
+            <div class="flex items-center gap-6 md:ml-6 md:border-l md:border-mustard/20 md:pl-8">
+                <img src="assets/logos/anima_negre.png" alt="Anima" class="h-5 md:h-7 w-auto opacity-80 invert transition-all">
+                <img src="assets/logos/suoni_rari.png" alt="Suoni Rari" class="h-5 md:h-7 w-auto opacity-80 invert transition-all">
+                <img src="assets/logos/loontani_tapes.jpg" alt="Loontani" class="h-6 md:h-8 w-auto opacity-80 grayscale transition-all rounded-sm">
             </div>
-            <div class="flex flex-col">
-                <span class="text-lg font-black tracking-tight text-mustard uppercase leading-none">DreamSequence</span>
-                <span class="text-[8px] text-burnt-orange font-mono mt-1 uppercase tracking-widest opacity-70">Trieste • Since 1972</span>
-            </div>
-        </a>
+        </div>
 
         <!-- Rights & Terminal -->
         <div class="flex flex-col items-center gap-4">
