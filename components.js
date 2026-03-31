@@ -170,9 +170,12 @@ const Footer = () => `
                 </div>
             </a>
             
-            <!-- Partner Logo -->
-            <div class="flex items-center ml-4">
+            <!-- Partner Logos -->
+            <div class="flex items-center gap-6 ml-4">
                 <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all">
+                <a href="https://animanera.net/" target="_blank" class="flex items-center group">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-8 md:h-12 w-auto opacity-60 group-hover:opacity-100 transition-all filter grayscale hover:grayscale-0">
+                </a>
             </div>
         </div>
 
