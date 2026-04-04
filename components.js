@@ -306,7 +306,8 @@ const ALBUM_LINKS = {
     'Live Paris': 'https://dreamsequence3.bandcamp.com/album/en-concert-au-th-tre-de-la-commune',
     'Triestina': 'https://dreamsequence3.bandcamp.com/album/cosmonautica-triestina',
     'ICA London': 'https://dreamsequence3.bandcamp.com/album/live-at-the-ica',
-    'KS Session': 'https://dreamsequence3.bandcamp.com/album/ks-session'
+    'KS Session': 'https://dreamsequence3.bandcamp.com/album/ks-session',
+    'Rozzol Pulse': 'https://dreamsequence3.bandcamp.com/album/rozzol-pulse'
 };
 
 window.playAlbum = (title) => {

@@ -279,6 +279,16 @@
                                 <span class="material-symbols-outlined text-[10px] text-cyan-tech"></span>
                             </div>
                         </div>
+                        <div class="carousel-item w-64 archive-card p-2"
+                            onclick="showModal('assets/galery/ds-live-10.JPG')">
+                            <div class="img-container aspect-square mb-3">
+                                <img src="assets/galery/ds-live-10.JPG">
+                            </div>
+                            <div class="flex justify-between items-center tech-mono text-[9px]">
+                                <span class="text-mustard">LIVE_REF_10</span>
+                                <span class="material-symbols-outlined text-[10px] text-cyan-tech">sensors</span>
+                            </div>
+                        </div>
                     </div>
                     <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-live', -300)">
                         <span class="material-symbols-outlined">chevron_left</span>
@@ -367,6 +377,20 @@
                                     05E_1976</span>
                                 <p class="text-[12px] text-white/50 leading-relaxed max-w-xs">
                                     Atomium, Brussels. 1976
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item w-96 group cursor-pointer"
+                            onclick="showModal('assets/galery/ds-tours-06.JPG')">
+                            <div class="img-container aspect-video mb-6 overflow-hidden">
+                                <img src="assets/galery/ds-tours-06.JPG" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="tech-mono text-[9px] text-white/40 uppercase mb-2 block">CAPTURE:
+                                    06F_1977</span>
+                                <p class="text-[11px] text-white/50 leading-relaxed max-w-xs">
+                                    Dream Sequence: Il Quadrilatero (Live in Trieste, 1977)
                                 </p>
                             </div>
                         </div>
@@ -470,7 +494,7 @@
         </div>
     </div>
 
-    <script src="components.js"></script>
+    <script src="components.js?v=2.0"></script>
     <script>
         function showModal(src) {
             const modal = document.getElementById('imageModal');
