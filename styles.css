@@ -165,12 +165,15 @@ h1 {
 .photo-frame {
     border: 1px solid rgba(141, 110, 99, 0.3);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .photo-frame:hover {
     border-color: #d69e2e;
-    transform: scale(1.02);
+    transform: scale(1.02) rotate(-1deg);
 }
 
 /* Professional Nav */
@@ -522,6 +525,8 @@ h1 {
     object-fit: cover;
     filter: grayscale(0.2) contrast(1.1);
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .archive-card:hover .img-container img {
@@ -579,6 +584,7 @@ h1 {
     padding-bottom: 2rem;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    will-change: scroll-position;
 }
 
 .carousel-item {
