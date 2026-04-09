@@ -15,6 +15,10 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="tailwind-config.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js?v=2.1" defer></script>
+    <!-- Preloads -->
+    <link rel="preload" href="assets/lp/Nebbia 1976.png" as="image">
+    <link rel="preload" href="assets/logo.jpg" as="image">
 </head>
 
 <body
@@ -35,7 +39,8 @@
                                     <div
                                         class="relative aspect-square overflow-hidden shadow-inner border border-white/5 bg-background-dark">
                                         <img loading="lazy" src="assets/lp/Nebbia 1976.png" alt="Nebbia Album Cover"
-                                            class="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110">
+                                            class="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110"
+                                            width="1024" height="1024" fetchpriority="high">
                                         <div
                                             class="absolute inset-0 bg-gradient-to-tr from-black/60 to-transparent mix-blend-overlay">
                                         </div>
@@ -131,7 +136,8 @@
                                 <div
                                     class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                     <img loading="lazy" src="assets/lp/Sequence 1973.jpg" alt="Sequence 1973"
-                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                        width="2048" height="2048">
                                     <div
                                         class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                         <button onclick="playAlbum('Sequence')"
@@ -152,7 +158,8 @@
                                 <div
                                     class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                     <img loading="lazy" src="assets/lp/Ganimede 1975.jpg" alt="Ganimede 1975"
-                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                        width="2048" height="2048">
                                     <div
                                         class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                         <button onclick="playAlbum('Ganimede')"
@@ -173,7 +180,8 @@
                                 <div
                                     class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                     <img loading="lazy" src="assets/lp/Nebbia 1976.png" alt="Nebbia 1976"
-                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                        width="1024" height="1024">
                                     <div
                                         class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                         <button onclick="playAlbum('Nebbia')"
@@ -196,7 +204,8 @@
                                 <div
                                     class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                     <img loading="lazy" src="assets/lp/Nebula 1979.jpeg" alt="Nebula 1979"
-                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                        class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                        width="1024" height="1024">
                                     <div
                                         class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                         <button onclick="playAlbum('Nebula')"
@@ -323,7 +332,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Live 74 1974.jpg" alt="Live 74"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="2048" height="2048">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Live 74')"
@@ -346,7 +356,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Live Ljubljana'76 1978.png" alt="Live Ljubljana"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1024" height="1024">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Live Ljubljana')"
@@ -370,7 +381,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Theatredela Commune1977_Paris.png" alt="Live Paris"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1024" height="1024">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Live Paris')"
@@ -393,7 +405,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/BellasArtes_1977.jpg" alt="Bellas Artes '77"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1200" height="1200">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Bellas Artes')"
@@ -416,7 +429,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Massana_1977.jpg" alt="Massana '77"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1200" height="1200">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Massana')"
@@ -439,7 +453,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/ICA_London.jpg" alt="ICA London"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1200" height="1200">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('ICA London')"
@@ -462,7 +477,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Live Prague'76 1977.jpg" alt="Live Prague"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="911" height="907">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Live Prague')"
@@ -485,7 +501,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Rozzol_pulse-1977.JPG" alt="Rozzol Pulse '77"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="2048" height="2048">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Rozzol Pulse')"
@@ -509,7 +526,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lp/The Euclidean Sea 1978.jpg" alt="The Euclidean Sea 1978"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="2000" height="2000">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('The Euclidean Sea')"
@@ -533,7 +551,8 @@
                                     <div
                                         class="relative aspect-square w-full overflow-hidden cursor-pointer photo-frame-dark shadow-xl">
                                         <img loading="lazy" src="assets/lives/Kyoto -1980.jpg" alt="Kyoto - 1980"
-                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110">
+                                            class="h-full w-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                                            width="1200" height="1200">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 backdrop-blur-sm opacity-0 transition-all duration-500 group-hover:opacity-100">
                                             <button onclick="playAlbum('Kyoto')"
@@ -636,7 +655,6 @@
         <div id="main-footer"></div>
     </div>
 
-    <script src="components.js?v=2.1"></script>
 </body>
 
 </html>

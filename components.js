@@ -9,7 +9,7 @@ const Header = () => `
     <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full relative z-[110] transition-all duration-500" id="nav-content">
         <a href="index.html" class="flex items-center gap-3 group">
             <div class="size-10 md:size-12 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
-                <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
+                <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover" width="597" height="571">
             </div>
             <div class="flex flex-col">
                 <h2 class="text-lg md:text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard leading-tight">Dream Sequence</h2>
@@ -110,15 +110,15 @@ const initOscilloscope = () => {
         mouseX = e.clientX / window.innerWidth;
     });
 
+    let isVisible = true;
+    const observer = new IntersectionObserver((entries) => {
+        isVisible = entries[0].isIntersecting;
+    }, { threshold: 0 });
+    observer.observe(canvas);
+
     const draw = () => {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            ctx.clearRect(0, 0, width, height);
-            ctx.beginPath();
-            ctx.lineWidth = 1.5;
-            ctx.strokeStyle = '#29B6B6';
-            ctx.moveTo(0, height / 2);
-            ctx.lineTo(width, height / 2);
-            ctx.stroke();
+        if (!isVisible || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            requestAnimationFrame(draw);
             return;
         }
 
@@ -162,7 +162,7 @@ const Footer = () => `
         <div class="flex flex-col md:flex-row items-center gap-6">
             <a href="index.html" class="flex items-center gap-4 group">
                 <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform">
-                    <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover">
+                    <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover" width="597" height="571" loading="lazy">
                 </div>
                 <div class="flex flex-col">
                     <span class="text-lg font-black tracking-tight text-mustard uppercase leading-none">DreamSequence</span>
@@ -172,9 +172,9 @@ const Footer = () => `
             
             <!-- Partner Logos -->
             <div class="flex items-center gap-2 ml-4">
-                <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all">
+                <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
                 <div class="flex items-center -translate-y-2 mix-blend-screen">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-24 md:h-32 w-auto opacity-80">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-24 md:h-32 w-auto opacity-80" width="1024" height="1024" loading="lazy">
                 </div>
             </div>
         </div>

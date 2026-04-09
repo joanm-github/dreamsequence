@@ -15,6 +15,10 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="tailwind-config.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js?v=2.1" defer></script>
+    <!-- Preloads -->
+    <link rel="preload" href="assets/galery/ds-archive-02.jpg" as="image">
+    <link rel="preload" href="assets/logo.jpg" as="image">
 </head>
 
 <body
@@ -33,7 +37,8 @@
                     <div
                         class="max-w-3xl mx-auto rounded-sm overflow-hidden photo-frame transform -rotate-1 shadow-2xl">
                         <img loading="lazy" src="assets/galery/ds-archive-02.jpg" alt="The DreamSequence Trio"
-                            class="w-full h-auto grayscale-[0.2] sepia-[0.1] hover:scale-105 transition-transform duration-[3000ms]">
+                            class="w-full h-auto grayscale-[0.2] sepia-[0.1] hover:scale-105 transition-transform duration-[3000ms]"
+                            width="1088" height="960" fetchpriority="high">
                     </div>
                 </header>
 
@@ -44,7 +49,7 @@
                         <div class="relative w-full aspect-[3/4] mb-10 overflow-hidden photo-frame-dark shadow-xl">
                             <img loading="lazy" alt="Elena portrait"
                                 class="w-full h-full object-cover sepia-[.3] grayscale-[.2] group-hover:scale-110 transition-transform duration-[2000ms]"
-                                src="assets/Elena Leitner.JPG" loading="lazy">
+                                src="assets/Elena Leitner.JPG" width="2848" height="4288">
                         </div>
                         <h2 class="text-4xl font-black uppercase text-mustard mb-3 tracking-tight">Elena</h2>
                         <p
@@ -67,7 +72,7 @@
                         <div class="relative w-full aspect-[3/4] mb-10 overflow-hidden photo-frame-dark shadow-xl">
                             <img loading="lazy" alt="Giulia portrait"
                                 class="w-full h-full object-cover sepia-[.3] grayscale-[.2] group-hover:scale-110 transition-transform duration-[2000ms]"
-                                src="assets/Giulia Leitner.JPG" loading="lazy">
+                                src="assets/Giulia Leitner.JPG" width="2848" height="4288">
                         </div>
                         <h2 class="text-4xl font-black uppercase text-mustard mb-3 tracking-tight">Giulia</h2>
                         <p
@@ -91,7 +96,7 @@
                         <div class="relative w-full aspect-[3/4] mb-10 overflow-hidden photo-frame-dark shadow-xl">
                             <img loading="lazy" alt="Sofia portrait"
                                 class="w-full h-full object-cover sepia-[.3] grayscale-[.2] group-hover:scale-110 transition-transform duration-[2000ms]"
-                                src="assets/Sofia Martini.JPG" loading="lazy">
+                                src="assets/Sofia Martini.JPG" width="2336" height="3504">
                         </div>
                         <h2 class="text-4xl font-black uppercase text-mustard mb-3 tracking-tight">Sofia</h2>
                         <p
@@ -132,7 +137,8 @@
 
                     <div class="mb-20 max-w-4xl mx-auto overflow-hidden photo-frame shadow-2xl group">
                         <img loading="lazy" src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG" alt="DreamSequence Live in Trieste"
-                            class="w-full h-auto grayscale-[0.3] sepia-[0.2] hover:scale-110 transition-transform duration-[5000ms]">
+                            class="w-full h-auto grayscale-[0.3] sepia-[0.2] hover:scale-110 transition-transform duration-[5000ms]"
+                            width="1184" height="864">
                     </div>
 
                     <p class="text-2xl text-[#d4c5a6] leading-relaxed font-light max-w-4xl mx-auto">
@@ -161,7 +167,6 @@
         <div id="main-footer"></div>
     </div>
 
-    <script src="components.js?v=2.1"></script>
 </body>
 
 </html>

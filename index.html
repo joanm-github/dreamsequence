@@ -14,9 +14,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    
+    <!-- Preloads & Priority -->
+    <link rel="preload" href="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG" as="image">
+    <link rel="preload" href="assets/logo.jpg" as="image">
+    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="tailwind-config.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js?v=2.1" defer></script>
 </head>
 
 <body
@@ -31,7 +37,8 @@
                     <div class="absolute inset-0 z-0">
                         <img alt="Blurred vintage analog synthesizer background"
                             class="w-full h-full object-cover opacity-40 blur-sm"
-                            src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG" />
+                            src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG"
+                            width="1184" height="864" fetchpriority="high" />
                         <div class="absolute inset-0 bg-cosmic-black/60 mix-blend-multiply"></div>
                         <div class="absolute inset-0 bg-gradient-to-t from-cosmic-black via-transparent to-transparent">
                         </div>
@@ -99,7 +106,8 @@
                                         </div>
                                         <img alt="Elena performing on a vintage synthesizer"
                                             class="w-full h-full object-cover opacity-100 transition-opacity"
-                                            src="assets/galery/ds-elena-portada.jpg" />
+                                            src="assets/galery/ds-elena-portada.jpg"
+                                            width="832" height="832" />
                                     </div>
                                     <div
                                         class="absolute top-10 left-0 w-40 md:w-56 lg:w-72 h-48 md:h-72 lg:h-96 rounded-sm overflow-hidden border border-[#8a4200] shadow-xl transform -rotate-3 z-20 transition-transform hover:rotate-0 hover:z-50 hover:scale-105 duration-500 bg-[#2a1a10]">
@@ -108,7 +116,8 @@
                                         </div>
                                         <img alt="Giulia adjusting the modular circuitry"
                                             class="w-full h-full object-cover opacity-100 transition-opacity"
-                                            src="assets/galery/ds-giulia-portada.jpg" />
+                                            src="assets/galery/ds-giulia-portada.jpg"
+                                            width="832" height="832" />
                                     </div>
                                     <div
                                         class="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 md:w-56 lg:w-72 h-48 md:h-72 lg:h-96 rounded-sm overflow-hidden border border-[#8a4200] shadow-xl transform rotate-2 z-30 transition-transform hover:rotate-0 hover:z-50 hover:scale-105 duration-500 bg-[#2a1a10]">
@@ -117,7 +126,8 @@
                                         </div>
                                         <img alt="Sofia captured during a tape delay transmission"
                                             class="w-full h-full object-cover opacity-100 transition-opacity"
-                                            src="assets/galery/ds-sofia-portada.jpg" />
+                                            src="assets/galery/ds-sofia-portada.jpg"
+                                            width="573" height="572" />
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +152,8 @@
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-burnt-orange transition-all hover:shadow-[0_0_20px_rgba(192,86,33,0.15)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Sequence 1973.jpg" alt="Sequence"
-                                    class="w-full h-full object-cover opacity-80">
+                                    class="w-full h-full object-cover opacity-80"
+                                    width="2048" height="2048" loading="lazy">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>
@@ -167,7 +178,8 @@
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-mustard transition-all hover:shadow-[0_0_20px_rgba(214,158,46,0.15)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Ganimede 1975.jpg" alt="Ganimede"
-                                    class="w-full h-full object-cover opacity-80">
+                                    class="w-full h-full object-cover opacity-80"
+                                    width="2048" height="2048" loading="lazy">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>
@@ -192,7 +204,8 @@
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-tobacco transition-all hover:shadow-[0_0_20px_rgba(93,64,55,0.25)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Nebbia 1976.png" alt="Nebbia"
-                                    class="w-full h-full object-cover opacity-80">
+                                    class="w-full h-full object-cover opacity-80"
+                                    width="1024" height="1024" loading="lazy">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>
@@ -222,7 +235,7 @@
                                 class="relative w-full md:w-4/5 lg:w-full aspect-[3/4] overflow-hidden photo-frame transform -rotate-1 shadow-2xl">
                                 <img src="assets/dreamsequence-trio.jpg" alt="DreamSequence Trio Portrait"
                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1200ms] ease-out will-change-transform"
-                                    loading="lazy">
+                                    loading="lazy" width="736" height="1408">
                                 <div class="absolute inset-0 bg-black/5 mix-blend-multiply"></div>
                             </div>
                         </div>
@@ -258,7 +271,6 @@
             </main>
             <div id="main-footer"></div>
         </div>
-        <script src="components.js?v=2.1"></script>
 </body>
 
 </html>
