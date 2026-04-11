@@ -247,15 +247,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initScrollReveal();
 
-    if (!document.getElementById('poster-modal')) {
+    if (!document.getElementById('imageModal')) {
         const modalDiv = document.createElement('div');
         modalDiv.innerHTML = `
-        <div id="poster-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-8 bg-black/95 backdrop-blur-xl animate-in fade-in duration-300">
-            <button onclick="closeModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-mustard hover:text-accent z-[110] transition-transform hover:scale-110 p-2">
-                <span class="material-symbols-outlined text-3xl md:text-4xl">close</span>
+        <div id="imageModal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/98 opacity-0 pointer-events-none transition-all duration-500 backdrop-blur-xl">
+            <button onclick="closeModal()" class="absolute top-8 right-8 md:top-12 md:right-12 text-mustard hover:text-white transition-colors z-[210] p-2">
+                <span class="material-symbols-outlined text-4xl md:text-5xl font-light">close</span>
             </button>
-            <div class="h-full w-full max-w-5xl flex items-center justify-center relative">
-                <img id="modal-img" src="" alt="Tour Poster" class="max-w-full max-h-full object-contain shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-mustard/10 rounded-sm">
+            <div class="max-w-[95vw] max-h-[90vh] relative p-1 bg-white/5 border border-white/10 shadow-2xl animate-in zoom-in-95 duration-500">
+                <img id="modalImage" src="" class="max-w-full max-h-[85vh] object-contain shadow-[0_0_50px_rgba(0,0,0,0.8)]">
+                <div class="absolute -bottom-12 left-0 w-full text-center">
+                    <span id="modalCaption" class="tech-mono text-[10px] text-cyan-tech uppercase tracking-[0.4em]"></span>
+                </div>
             </div>
         </div>`;
         document.body.appendChild(modalDiv);
@@ -265,26 +268,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Modal Logic
-window.showModal = (imgSrc) => {
-    const modal = document.getElementById('poster-modal');
-    const img = document.getElementById('modal-img');
+window.showModal = (src) => {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImage');
+    const caption = document.getElementById('modalCaption');
+    
     if (modal && img) {
-        img.src = imgSrc;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+        img.src = src;
+        if (caption) {
+            const filename = src.split('/').pop().split('.')[0].replace(/-/g, '_');
+            caption.textContent = `DATA_REF: ${filename.toUpperCase()}`;
+        }
+        
+        modal.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+        modal.classList.add('flex', 'opacity-100');
         document.body.style.overflow = 'hidden';
+        
+        // Visual "glitch" effect on load
+        const overlay = document.querySelector('.crt-overlay');
+        if (overlay) {
+            overlay.style.animationDuration = '0.05s';
+            setTimeout(() => overlay.style.animationDuration = '0.15s', 300);
+        }
     }
 };
 
 window.closeModal = () => {
-    const modal = document.getElementById('poster-modal');
+    const modal = document.getElementById('imageModal');
     if (modal) {
-        modal.classList.add('animate-out', 'fade-out', 'duration-300');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('flex', 'opacity-100');
         setTimeout(() => {
             modal.classList.add('hidden');
-            modal.classList.remove('flex', 'animate-out', 'fade-out');
             document.body.style.overflow = '';
-        }, 300);
+        }, 500);
     }
 };
 
@@ -440,8 +457,8 @@ function renderCarousel(id, items, type) {
         const innerContent = type === 'lab' ? `
             <div class="flex justify-between items-end">
                 <div class="tech-mono">
-                    <h3 class="text-mustard text-xs font-bold uppercase mb-1"></h3>
-                    <p class="text-[9px] text-white/30 uppercase tracking-widest"></p>
+                    <h3 class="text-mustard text-xs font-bold uppercase mb-1">${item.alt}</h3>
+                    <p class="text-[9px] text-white/30 uppercase tracking-widest">DS_STUDIO_REF_${item.alt.split(' ').pop()}</p>
                 </div>
                 <button class="btn-tech">VIEW</button>
             </div>` : `
@@ -459,6 +476,43 @@ function renderCarousel(id, items, type) {
             </div>`;
     }).join('');
 }
+
+// Global UI Logic for Carousel Controls
+window.scrollCarousel = (id, distance) => {
+    const container = document.getElementById(id);
+    if (container) container.scrollBy({ left: distance, behavior: 'smooth' });
+};
+
+window.updateButtons = (id) => {
+    const container = document.getElementById(id);
+    if (!container) return;
+    const wrapper = container.closest('.carousel-wrapper');
+    if (!wrapper) return;
+    const btnLeft = wrapper.querySelector('.btn-left');
+    const btnRight = wrapper.querySelector('.btn-right');
+    const scrollLeft = Math.ceil(container.scrollLeft);
+    const scrollWidth = container.scrollWidth;
+    const clientWidth = container.clientWidth;
+    if (btnLeft) scrollLeft > 5 ? btnLeft.classList.add('is-active') : btnLeft.classList.remove('is-active');
+    if (btnRight) scrollWidth > (clientWidth + scrollLeft + 5) ? btnRight.classList.add('is-active') : btnRight.classList.remove('is-active');
+};
+
+window.initCarousels = () => {
+    const carousels = document.querySelectorAll('.carousel-container');
+    carousels.forEach(container => {
+        container.addEventListener('scroll', () => window.updateButtons(container.id), { passive: true });
+        window.updateButtons(container.id);
+    });
+};
+
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.carousel-container').forEach(c => window.updateButtons(c.id));
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') window.closeModal();
+});
+
 
 // Protect Images from right-click
 document.addEventListener('contextmenu', (e) => {
