@@ -88,7 +88,15 @@ img {
     user-select: none;
     -webkit-user-drag: none;
     -webkit-touch-callout: none;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
+
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+.aspect-album { aspect-ratio: 1 / 1; }
 
 /* Fluid Typography */
 h1 {

@@ -23,8 +23,7 @@
 <body class="bg-[#080808] text-[#d4c5a6] font-display overflow-x-hidden">
 
     <div class="layout-container flex h-full grow flex-col">
-        <header>
-            <div id="main-header"></div>
+        <header id="main-header" class="min-h-[80px]">
         </header>
 
         <main class="flex-1 px-6 md:px-12 py-20 max-w-[1400px] mx-auto w-full">
@@ -67,7 +66,7 @@
                     <span class="section-tag">Laboratory_Studies</span>
                 </div>
                 <div class="carousel-wrapper group mb-24">
-                    <div id="laboratory-carousel" class="carousel-container no-scrollbar">
+                    <div id="laboratory-carousel" class="carousel-container no-scrollbar min-h-[400px]">
                         <div class="py-12 text-center w-full tech-mono text-[10px] text-mustard/20 animate-pulse">CONNECTING_TO_ARCHIVE_BUFFER...</div>
                     </div>
                     <button class="carousel-btn btn-left" onclick="scrollCarousel('laboratory-carousel', -300)" aria-label="Previous Laboratory Studies">
@@ -90,7 +89,7 @@
                     <span class="section-tag">Live_Signal_Archive</span>
                 </div>
                 <div class="carousel-wrapper group">
-                    <div id="carousel-live" class="carousel-container no-scrollbar"></div>
+                    <div id="carousel-live" class="carousel-container no-scrollbar min-h-[350px]"></div>
                     <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-live', -300)" aria-label="Previous Live Transmissions">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
@@ -111,7 +110,7 @@
                     <span class="section-tag">Tour_Log_archives</span>
                 </div>
                 <div class="carousel-wrapper group">
-                    <div id="carousel-cities" class="carousel-container no-scrollbar"></div>
+                    <div id="carousel-cities" class="carousel-container no-scrollbar min-h-[400px]"></div>
                     <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-cities', -400)" aria-label="Previous City Pictures">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
@@ -152,7 +151,7 @@
         </main>
 
         <footer>
-            <div id="main-footer"></div>
+            <div id="main-footer" class="min-h-[200px]"></div>
         </footer>
     </div>
 
