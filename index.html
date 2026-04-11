@@ -19,8 +19,10 @@
     <link rel="preload" href="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG" as="image">
     <link rel="preload" href="assets/logo.jpg" as="image">
     
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="tailwind-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
+    <script src="tailwind-config.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <script src="components.js?v=2.1" defer></script>
 </head>
@@ -86,12 +88,12 @@
                             <div class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                                 <a href="https://dreamsequence3.bandcamp.com/music" target="_blank"
                                     class="group flex items-center justify-center gap-3 rounded-lg bandcamp-btn px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all">
-                                    <span class="material-symbols-outlined group-hover:animate-spin">album</span>
+                                    <span class="material-symbols-outlined group-hover:animate-spin" aria-hidden="true">album</span>
                                     Listen to the Cosmos
                                 </a>
                                 <a href="biography.html"
                                     class="flex items-center justify-center gap-3 rounded-lg border border-tobacco bg-[#2a1a10]/50 hover:bg-[#3e2723] text-mustard px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all backdrop-blur-sm">
-                                    <span class="material-symbols-outlined">history_edu</span>
+                                    <span class="material-symbols-outlined" aria-hidden="true">history_edu</span>
                                     Our Story
                                 </a>
                             </div>
@@ -153,7 +155,7 @@
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Sequence 1973.jpg" alt="Sequence"
                                     class="w-full h-full object-cover opacity-80"
-                                    width="2048" height="2048" loading="lazy">
+                                    width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>
@@ -179,7 +181,7 @@
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Ganimede 1975.jpg" alt="Ganimede"
                                     class="w-full h-full object-cover opacity-80"
-                                    width="2048" height="2048" loading="lazy">
+                                    width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>
@@ -205,7 +207,7 @@
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Nebbia 1976.png" alt="Nebbia"
                                     class="w-full h-full object-cover opacity-80"
-                                    width="1024" height="1024" loading="lazy">
+                                    width="1024" height="1024" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
                                 </div>

@@ -12,8 +12,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="tailwind-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
+    <script src="tailwind-config.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <script src="components.js?v=2.1" defer></script>
     <link rel="preload" href="assets/logo.jpg" as="image">
@@ -63,9 +65,9 @@
                                 <div class="flex items-center gap-6 md:gap-10 w-full md:w-auto">
                                     <div onclick="showModal('assets/posters/Scandinavia_Tour_1975.jpg')"
                                         class="relative w-24 h-32 rounded-sm overflow-hidden cursor-pointer photo-frame-dark flex items-center justify-center hover:scale-110 transition-all duration-500 shrink-0">
-                                        <img loading="lazy" src="assets/posters/Scandinavia_Tour_1975.jpg" alt="Scandinavia Tour 1975"
+                                        <img src="assets/posters/Scandinavia_Tour_1975.jpg" alt="Scandinavia Tour 1975"
                                             class="w-full h-full object-contain group-hover:grayscale-0 transition-all duration-700"
-                                            width="691" height="1000">
+                                            width="691" height="1000" fetchpriority="high">
                                         <div
                                             class="absolute inset-0 flex items-center justify-center bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <span class="material-symbols-outlined text-mustard text-3xl">zoom_in</span>

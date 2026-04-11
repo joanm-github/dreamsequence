@@ -1,7 +1,7 @@
 const Header = () => `
 <header class="fixed top-0 left-0 z-[100] w-full border-b border-transparent transition-all duration-500" id="main-header-nav">
     <!-- Oscilloscope Canvas Background (Hidden on scroll) -->
-    <canvas id="header-oscilloscope" class="absolute inset-x-0 bottom-0 h-10 w-full opacity-20 pointer-events-none transition-opacity duration-500"></canvas>
+    <canvas id="header-oscilloscope" class="absolute inset-x-0 bottom-0 h-10 w-full opacity-20 pointer-events-none transition-opacity duration-500" aria-hidden="true"></canvas>
     
     <!-- Background Layer (Controlled by Scroll) -->
     <div id="nav-bg" class="absolute inset-0 bg-background-light/0 dark:bg-[#1a1a1a]/0 backdrop-blur-0 transition-all duration-500 pointer-events-none"></div>
@@ -25,8 +25,8 @@ const Header = () => `
         </nav>
 
         <div class="flex items-center gap-3 md:gap-4">
-            <button class="lg:hidden text-tobacco dark:text-accent p-1 transition-transform active:scale-95" onclick="toggleMobileMenu()">
-                <span class="material-symbols-outlined text-4xl" id="menu-icon">menu</span>
+            <button class="lg:hidden text-tobacco dark:text-accent p-1 transition-transform active:scale-95" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <span class="material-symbols-outlined text-4xl" id="menu-icon" aria-hidden="true">menu</span>
             </button>
         </div>
     </div>
@@ -198,9 +198,9 @@ const Footer = () => `
                 <span class="sr-only">Instagram</span>
                 <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
             </a>
-            <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://dreamsequence3.bandcamp.com" target="_blank">
+            <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://dreamsequence3.bandcamp.com" target="_blank" aria-label="Visit our Bandcamp">
                 <span class="sr-only">Bandcamp</span>
-                <svg class="size-5" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
+                <svg class="size-5" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
             </a>
         </div>
     </div>
@@ -251,8 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalDiv = document.createElement('div');
         modalDiv.innerHTML = `
         <div id="imageModal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/98 opacity-0 pointer-events-none transition-all duration-500 backdrop-blur-xl">
-            <button onclick="closeModal()" class="absolute top-8 right-8 md:top-12 md:right-12 text-mustard hover:text-white transition-colors z-[210] p-2">
-                <span class="material-symbols-outlined text-4xl md:text-5xl font-light">close</span>
+            <button onclick="closeModal()" class="absolute top-8 right-8 md:top-12 md:right-12 text-mustard hover:text-white transition-colors z-[210] p-2" aria-label="Close Modal">
+                <span class="material-symbols-outlined text-4xl md:text-5xl font-light" aria-hidden="true">close</span>
             </button>
             <div class="max-w-[95vw] max-h-[90vh] relative p-1 bg-white/5 border border-white/10 shadow-2xl animate-in zoom-in-95 duration-500">
                 <img id="modalImage" src="" class="max-w-full max-h-[85vh] object-contain shadow-[0_0_50px_rgba(0,0,0,0.8)]">
@@ -460,7 +460,7 @@ function renderCarousel(id, items, type) {
                     <h3 class="text-mustard text-xs font-bold uppercase mb-1">${item.alt}</h3>
                     <p class="text-[9px] text-white/30 uppercase tracking-widest">DS_STUDIO_REF_${item.alt.split(' ').pop()}</p>
                 </div>
-                <button class="btn-tech">VIEW</button>
+                <button class="btn-tech" aria-label="View technical details for ${item.alt}">VIEW</button>
             </div>` : `
             <div class="flex justify-between items-center tech-mono text-[9px]">
                 <span class="text-mustard">${item.alt.toUpperCase()}</span>
@@ -468,9 +468,9 @@ function renderCarousel(id, items, type) {
             </div>`;
 
         return `
-            <div class="carousel-item ${cardClass} archive-card p-2" onclick="showModal('${item.src}')">
+            <div class="carousel-item ${cardClass} archive-card p-2" onclick="showModal('${item.src}')" role="button" aria-label="View ${item.alt}">
                 <div class="img-container aspect-square mb-3">
-                    <img loading="lazy" src="${item.src}" width="${item.w}" height="${item.h}">
+                    <img loading="lazy" src="${item.src}" width="${item.w}" height="${item.h}" alt="${item.alt}">
                 </div>
                 ${innerContent}
             </div>`;
