@@ -20,10 +20,6 @@ jobs:
       - name: Audit static site
         uses: treosh/lighthouse-ci-action@v12
         with:
-          urls: |
-            http://localhost:3000/index.html
-            http://localhost:3000/biography.html
-          staticDistDir: ./
+          configPath: ./.lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: ./.lighthouserc.json
