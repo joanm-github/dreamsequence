@@ -12,14 +12,14 @@
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["warn", {"minScore": 0.5}],
-        "categories:accessibility": ["error", {"minScore": 0.9}],
-        "categories:best-practices": ["error", {"minScore": 0.9}],
-        "categories:seo": ["error", {"minScore": 0.9}],
-        "resource-summary:image:size": ["warn", {"maxSize": 1500000}],
-        "resource-summary:total:size": ["warn", {"maxSize": 10000000}],
-        "cumulative-layout-shift": ["warn", {"maxNumericValue": 0.2}],
-        "largest-contentful-paint": ["warn", {"maxNumericValue": 10000}]
+        "categories:performance": ["error", {"minScore": 0.85}],
+        "categories:accessibility": ["error", {"minScore": 0.95}],
+        "categories:best-practices": ["error", {"minScore": 0.95}],
+        "categories:seo": ["error", {"minScore": 1.0}],
+        "resource-summary:image:size": ["warn", {"maxSize": 1000000}],
+        "resource-summary:total:size": ["error", {"maxSize": 5000000}],
+        "cumulative-layout-shift": ["error", {"maxNumericValue": 0.1}],
+        "largest-contentful-paint": ["error", {"maxNumericValue": 2500}]
       }
     },
     "upload": {

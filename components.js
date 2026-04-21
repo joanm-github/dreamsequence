@@ -412,10 +412,10 @@ window.toggleMobileMenu = () => {
 };
 
 // Gallery Rendering Engine
-window.loadGallery = async (dataUrl) => {
+window.loadGallery = async (dataUrl = 'gallery-data.json') => {
     try {
         let data;
-        // Fallback for local file access (bypass CORS)
+        // fallback for local file access or already loaded global data
         if (window.GALLERY_DATA) {
             data = window.GALLERY_DATA;
         } else {
@@ -444,7 +444,7 @@ function renderCarousel(id, items, type) {
             return `
                 <div class="carousel-item w-96 group cursor-pointer" onclick="showModal('${item.src}')">
                     <div class="img-container aspect-video mb-6 overflow-hidden">
-                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover" width="${item.w}" height="${item.h}">
+                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover" width="${item.w}" height="${item.h}" alt="${item.alt || 'City Archive'}">
                     </div>
                     <div>
                         <span class="tech-mono text-[9px] text-white/40 uppercase mb-2 block">CAPTURE: ${item.alt.toUpperCase()}</span>

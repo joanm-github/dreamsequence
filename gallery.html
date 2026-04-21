@@ -5,7 +5,9 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ARCHIVIO ANALOGICO | DreamSequence</title>
-    <meta name="description" content="Retrieval of analog data streams. Filtered technical archive of DreamSequence.">
+    <meta name="description" content="Retrieval of analog data streams. Captured on 35mm film between 1972 and 1980. Filtered technical archive of DreamSequence studio and live works.">
+    <meta property="og:title" content="DreamSequence | Archivio Analogico">
+    <meta property="og:description" content="Imatges capturades en 35mm (1972-1980).">
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
         rel="stylesheet" />
@@ -159,12 +161,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Give components.js logic a small head start to inject header/footer/modal
-            setTimeout(() => {
-                if (window.loadGallery) {
-                    window.loadGallery('gallery-data.json');
-                }
-            }, 100);
+            if (window.loadGallery) {
+                window.loadGallery();
+            }
         });
     </script>
 </body>
