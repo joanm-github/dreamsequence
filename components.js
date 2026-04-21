@@ -99,20 +99,15 @@ const initOscilloscope = () => {
     let offset = 0;
     let scrollIntensity = 0;
     let mouseX = 0;
+    let mouseY = 0;
 
-    // Track scroll for intensity
     window.addEventListener('scroll', () => {
-        scrollIntensity = window.scrollY * 0.001;
+        scrollIntensity = Math.min(window.scrollY * 0.002, 2);
     });
 
-    let spike = 0;
-    window.addEventListener('mousedown', () => {
-        spike = 40;
-    });
-
-    // Track mouse for frequency modulation
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX / window.innerWidth;
+        mouseY = e.clientY / window.innerHeight;
     });
 
     let isVisible = true;
@@ -122,35 +117,56 @@ const initOscilloscope = () => {
     observer.observe(canvas);
 
     const draw = () => {
-        if (!isVisible || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (!isVisible) {
             requestAnimationFrame(draw);
             return;
         }
 
         ctx.clearRect(0, 0, width, height);
-        ctx.beginPath();
-        ctx.lineWidth = 1.5;
-        ctx.strokeStyle = '#29B6B6'; // Luminous Teal
+        
+        const drawWave = (color, opacity, shift, ampScale) => {
+            ctx.beginPath();
+            ctx.lineWidth = color === '#29B6B6' ? 2 : 1.5;
+            ctx.strokeStyle = color;
+            ctx.globalAlpha = opacity;
+            
+            // Add a subtle glow for the primary wave
+            if (opacity > 0.5) {
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = color;
+            } else {
+                ctx.shadowBlur = 0;
+            }
 
-        ctx.moveTo(0, height / 2);
+            ctx.moveTo(0, height / 2);
 
-        for (let x = 0; x < width; x++) {
-            // Interactive wave: reacts to mouse position and scroll
-            const freq1 = 0.01 + (mouseX * 0.03);
-            const freq2 = 0.04 + (scrollIntensity * 0.05);
+            for (let x = 0; x < width; x++) {
+                const freq1 = 0.008 + (mouseX * 0.02);
+                const freq2 = 0.02 + (scrollIntensity * 0.03);
+                
+                // Add some "electrical noise" modulation
+                const noise = Math.sin(x * 0.05 + offset * 2) * 2;
+                
+                const amp1 = (12 + (scrollIntensity * 25)) * ampScale;
+                const amp2 = (8 + (mouseY * 10)) * ampScale;
 
-            const amp1 = 10 + (scrollIntensity * 20) + spike;
-            const amp2 = 5 + (mouseX * 15) + (spike / 2);
+                const y = height / 2 +
+                    Math.sin(x * freq1 + offset + shift) * amp1 +
+                    Math.cos(x * freq2 + offset * 0.8 + shift) * amp2 +
+                    noise;
+                
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+        };
 
-            const y = height / 2 +
-                Math.sin(x * freq1 + offset) * amp1 +
-                Math.sin(x * freq2 + offset * 1.5) * amp2;
-            ctx.lineTo(x, y);
-        }
+        // Draw background "ghost" wave (phosphor persistence)
+        drawWave('#29B6B6', 0.15, -0.15, 1.05); 
+        
+        // Draw main wave
+        drawWave('#29B6B6', 0.8, 0, 1);
 
-        ctx.stroke();
-        offset += 0.05 + (scrollIntensity * 0.1);
-        if (spike > 0) spike *= 0.9;
+        offset += 0.04 + (scrollIntensity * 0.08);
         requestAnimationFrame(draw);
     };
 
