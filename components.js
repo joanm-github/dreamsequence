@@ -126,17 +126,12 @@ const initOscilloscope = () => {
         
         const drawWave = (color, opacity, shift, ampScale) => {
             ctx.beginPath();
-            ctx.lineWidth = color === '#29B6B6' ? 2 : 1.5;
+            ctx.lineWidth = color === '#29B6B6' ? (opacity > 0.5 ? 2 : 4) : 1.5;
             ctx.strokeStyle = color;
             ctx.globalAlpha = opacity;
             
-            // Add a subtle glow for the primary wave
-            if (opacity > 0.5) {
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = color;
-            } else {
-                ctx.shadowBlur = 0;
-            }
+            // Replaced expensive shadowBlur with layered strokes for performance
+            ctx.shadowBlur = 0; 
 
             ctx.moveTo(0, height / 2);
 
