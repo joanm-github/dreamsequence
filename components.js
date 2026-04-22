@@ -189,9 +189,9 @@ const Footer = () => `
             
             <!-- Partner Logos -->
             <div class="flex items-center gap-2 ml-4">
-                <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
+                <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari Records Logo" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
                 <div class="flex items-center -translate-y-2 mix-blend-screen">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera" class="h-24 md:h-32 w-auto opacity-80" width="1024" height="1024" loading="lazy">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-24 md:h-32 w-auto opacity-80" width="1024" height="1024" loading="lazy">
                 </div>
             </div>
         </div>
@@ -453,9 +453,9 @@ function renderCarousel(id, items, type) {
     container.innerHTML = items.map(item => {
         if (type === 'city') {
             return `
-                <div class="carousel-item w-96 group cursor-pointer" onclick="showModal('${item.src}')">
-                    <div class="img-container aspect-video mb-6 overflow-hidden">
-                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover" width="${item.w}" height="${item.h}" alt="${item.alt || 'City Archive'}">
+                <div class="carousel-item w-96 group cursor-pointer" onclick="showModal('${item.src}')" role="button" aria-label="View large version of ${item.alt}">
+                    <div class="img-container aspect-video mb-6 overflow-hidden bg-[#0c0c0c]">
+                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover" width="${item.w || 800}" height="${item.h || 450}" alt="${item.alt || 'City Archive Image'}">
                     </div>
                     <div>
                         <span class="tech-mono text-[9px] text-white/40 uppercase mb-2 block">CAPTURE: ${item.alt.toUpperCase()}</span>
@@ -479,9 +479,9 @@ function renderCarousel(id, items, type) {
             </div>`;
 
         return `
-            <div class="carousel-item ${cardClass} archive-card p-2" onclick="showModal('${item.src}')" role="button" aria-label="View ${item.alt}">
-                <div class="img-container aspect-square mb-3">
-                    <img loading="lazy" src="${item.src}" width="${item.w}" height="${item.h}" alt="${item.alt}">
+            <div class="carousel-item ${cardClass} archive-card p-2" onclick="showModal('${item.src}')" role="button" aria-label="View larger image of ${item.alt}">
+                <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
+                    <img loading="lazy" src="${item.src}" class="w-full h-full object-cover" width="${item.w || 600}" height="${item.h || 600}" alt="${item.alt || 'Archive item'}">
                 </div>
                 ${innerContent}
             </div>`;

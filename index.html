@@ -47,7 +47,7 @@
             <main class="flex-1">
                 <section class="hero-section">
                     <div class="absolute inset-0 z-0">
-                        <img alt="Blurred vintage analog synthesizer background"
+                        <img alt="Vintage analog synthesizer oscillator panel"
                             class="hero-bg"
                             src="assets/a49007c8-eb6e-448c-a6da-e3c77f13a707.JPG"
                             width="1184" height="864" fetchpriority="high">
@@ -110,7 +110,7 @@
                         </div>
                         <div class="relative h-[300px] md:h-[450px] lg:h-[600px] w-full mt-10 lg:mt-0">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="relative w-full h-full max-w-sm md:max-w-md lg:max-w-none mx-auto">
+                                <div class="relative w-full h-full max-sm:max-w-xs md:max-w-md lg:max-w-none mx-auto">
                                     <div
                                         class="absolute top-0 right-0 w-40 md:w-56 lg:w-72 h-48 md:h-72 lg:h-96 rounded-sm overflow-hidden border border-[#8a4200] shadow-xl photo-frame transform rotate-3 z-10 transition-transform hover:rotate-0 hover:z-50 hover:scale-105 duration-500 bg-[#2a1a10]">
                                         <div
@@ -163,7 +163,7 @@
                         <div
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-burnt-orange transition-all hover:shadow-[0_0_20px_rgba(192,86,33,0.15)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
-                                <img src="assets/lp/Sequence 1973.jpg" alt="Sequence"
+                                <img src="assets/lp/Sequence 1973.jpg" alt="Sequence Album Cover (1973)"
                                     class="w-full h-full object-cover opacity-80"
                                     width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
@@ -189,7 +189,7 @@
                         <div
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-mustard transition-all hover:shadow-[0_0_20px_rgba(214,158,46,0.15)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
-                                <img src="assets/lp/Ganimede 1975.jpg" alt="Ganimede"
+                                <img src="assets/lp/Ganimede 1975.jpg" alt="Ganimede Album Cover (1975)"
                                     class="w-full h-full object-cover opacity-80"
                                     width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
@@ -215,7 +215,7 @@
                         <div
                             class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-tobacco transition-all hover:shadow-[0_0_20px_rgba(93,64,55,0.25)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
-                                <img src="assets/lp/Nebbia 1976.png" alt="Nebbia"
+                                <img src="assets/lp/Nebbia 1976.png" alt="Nebbia Album Cover (1976)"
                                     class="w-full h-full object-cover opacity-80"
                                     width="1024" height="1024" loading="lazy" decoding="async">
                                 <div
@@ -240,14 +240,14 @@
                     </div>
                 </section>
 
-                <section class="py-32 px-6 bg-[#1a1613]">
+                <section class="py-32 px-6 bg-[#1a1613] reveal">
                     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <div class="order-2 lg:order-1 flex justify-center">
                             <div
                                 class="relative w-full md:w-4/5 lg:w-full aspect-[3/4] overflow-hidden photo-frame transform -rotate-1 shadow-2xl">
-                                <img src="assets/dreamsequence-trio.jpg" alt="DreamSequence Trio Portrait"
-                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1200ms] ease-out will-change-transform"
-                                    loading="lazy" width="736" height="1408">
+                                <img src="assets/dreamsequence-trio.jpg" alt="DreamSequence Trio Portrait - 1975 Trieste Studio Session"
+                                    class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 hover:brightness-110 transition-all duration-700"
+                                    width="736" height="1408" loading="lazy">
                                 <div class="absolute inset-0 bg-black/5 mix-blend-multiply"></div>
                             </div>
                         </div>
@@ -281,8 +281,9 @@
                 </section>
 
             </main>
-            <div id="main-footer"></div>
+            <footer id="main-footer" class="min-h-[250px] md:min-h-[250px] bg-[#1a1613]"></footer>
         </div>
+    </div>
 </body>
 
 </html>

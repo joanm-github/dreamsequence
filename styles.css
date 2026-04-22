@@ -99,8 +99,15 @@ body {
 }
 
 #main-footer {
-    min-height: 150px; /* Approximate height of the footer */
+    min-height: 250px; /* Increased to accommodate typical footer content */
     contain: layout;
+    background-color: #1a1613; /* Match footer background to avoid flash */
+}
+
+@media (max-width: 767px) {
+    #main-footer {
+        min-height: 450px; /* Mobile footer is usually taller */
+    }
 }
 
 /* Optimize Carousel Stability */
@@ -302,14 +309,16 @@ h1 {
 
 .reveal-hidden {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px); /* Reduced from 20px to minimize shift impact */
+    visibility: hidden; /* Added to keep it out of accessibility tree while hidden */
     transition: none;
 }
 
 .reveal-visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: visible;
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear;
 }
 
 /* Scroll Snap for Collection Page */
