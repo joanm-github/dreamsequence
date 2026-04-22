@@ -450,7 +450,14 @@ function renderCarousel(id, items, type) {
     const container = document.getElementById(id);
     if (!container || !items.length) return;
     
-    container.innerHTML = items.map(item => {
+    // For laboratory carousel, we may have hardcoded items for LCP
+    // We only want to render the rest of the items to avoid overwriting and causing CLS
+    const existingItemsCount = container.querySelectorAll('.carousel-item').length;
+    const itemsToRender = items.slice(existingItemsCount);
+    
+    if (itemsToRender.length === 0 && existingItemsCount > 0) return;
+
+    const newHtml = itemsToRender.map(item => {
         if (type === 'city') {
             return `
                 <div class="carousel-item w-96 group cursor-pointer" onclick="showModal('${item.src}')" role="button" aria-label="View large version of ${item.alt}">
@@ -486,6 +493,12 @@ function renderCarousel(id, items, type) {
                 ${innerContent}
             </div>`;
     }).join('');
+
+    // Remove pulse indicator if it exists
+    const pulse = container.querySelector('.animate-pulse');
+    if (pulse) pulse.remove();
+    
+    container.insertAdjacentHTML('beforeend', newHtml);
 }
 
 // Global UI Logic for Carousel Controls

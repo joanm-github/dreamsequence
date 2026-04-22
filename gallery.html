@@ -22,6 +22,7 @@
     <script src="gallery-data.js?v=2.0"></script>
     <script src="components.js?v=2.2" defer></script>
     <link rel="preload" href="assets/logo.jpg" as="image">
+    <link rel="preload" href="assets/galery/ds-studio-01.jpeg" as="image">
 </head>
 
 <body class="bg-[#080808] text-[#d4c5a6] font-display overflow-x-hidden">
@@ -71,6 +72,43 @@
                 </div>
                 <div class="carousel-wrapper group mb-24">
                     <div id="laboratory-carousel" class="carousel-container no-scrollbar min-h-[400px]">
+                        <!-- LCP Optimization: Hardcoded first 3 items -->
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-01.jpeg')" role="button" aria-label="View larger image of Studio 01">
+                            <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
+                                <img src="assets/galery/ds-studio-01.jpeg" class="w-full h-full object-cover" width="1028" height="963" alt="Studio 01" fetchpriority="high">
+                            </div>
+                            <div class="flex justify-between items-end">
+                                <div class="tech-mono">
+                                    <h3 class="text-mustard text-xs font-bold uppercase mb-1">Studio 01</h3>
+                                    <p class="text-[9px] text-white/30 uppercase tracking-widest">DS_STUDIO_REF_01</p>
+                                </div>
+                                <button class="btn-tech">VIEW</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-02.jpeg')" role="button" aria-label="View larger image of Studio 02">
+                            <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
+                                <img src="assets/galery/ds-studio-02.jpeg" class="w-full h-full object-cover" width="714" height="1071" alt="Studio 02">
+                            </div>
+                            <div class="flex justify-between items-end">
+                                <div class="tech-mono">
+                                    <h3 class="text-mustard text-xs font-bold uppercase mb-1">Studio 02</h3>
+                                    <p class="text-[9px] text-white/30 uppercase tracking-widest">DS_STUDIO_REF_02</p>
+                                </div>
+                                <button class="btn-tech">VIEW</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-03.jpeg')" role="button" aria-label="View larger image of Studio 03">
+                            <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
+                                <img src="assets/galery/ds-studio-03.jpeg" class="w-full h-full object-cover" width="672" height="896" alt="Studio 03">
+                            </div>
+                            <div class="flex justify-between items-end">
+                                <div class="tech-mono">
+                                    <h3 class="text-mustard text-xs font-bold uppercase mb-1">Studio 03</h3>
+                                    <p class="text-[9px] text-white/30 uppercase tracking-widest">DS_STUDIO_REF_03</p>
+                                </div>
+                                <button class="btn-tech">VIEW</button>
+                            </div>
+                        </div>
                         <div class="py-12 text-center w-full tech-mono text-[10px] text-mustard/20 animate-pulse">CONNECTING_TO_ARCHIVE_BUFFER...</div>
                     </div>
                     <button class="carousel-btn btn-left" onclick="scrollCarousel('laboratory-carousel', -300)" aria-label="Previous Laboratory Studies">

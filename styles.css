@@ -78,6 +78,7 @@ body {
     transition: background-color 0.5s ease;
     /* Prevent layout shifts from scrollbar appearing/disappearing */
     overflow-y: scroll;
+    min-height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -112,8 +113,11 @@ body {
 
 /* Optimize Carousel Stability */
 .carousel-container {
-    min-height: 300px; /* Reserve space for gallery items */
+    min-height: 400px; /* Aligned with JS injection heights */
     contain: layout;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
 }
 
 img {
@@ -255,6 +259,10 @@ h1 {
 /* Layout Reveal Enhancements */
 .reveal {
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    will-change: opacity, transform;
 }
 
 .menu-open {
@@ -309,9 +317,9 @@ h1 {
 
 .reveal-hidden {
     opacity: 0;
-    transform: translateY(10px); /* Reduced from 20px to minimize shift impact */
-    visibility: hidden; /* Added to keep it out of accessibility tree while hidden */
-    transition: none;
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: none !important;
 }
 
 .reveal-visible {
