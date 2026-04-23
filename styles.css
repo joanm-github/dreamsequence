@@ -89,7 +89,7 @@ body {
 
 /* Layout Stability Containers */
 #main-header {
-    min-height: 72px;
+    min-height: 80px;
 }
 
 @media (min-width: 768px) {
