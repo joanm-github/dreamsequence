@@ -32,7 +32,7 @@ const Header = () => `
     </div>
     
     <!-- Mobile Menu Overlay (Wolf Alice inspired) -->
-    <div id="mobile-menu" class="fixed inset-0 z-[80] hidden bg-cosmic-black lg:hidden animate-in fade-in duration-500 overflow-hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[120] hidden bg-cosmic-black lg:hidden animate-in fade-in duration-500 overflow-hidden">
         <!-- Noise Texture Layers -->
         <div class="absolute inset-0 pointer-events-none opacity-40 bg-noise mix-blend-overlay"></div>
         <div class="absolute inset-0 pointer-events-none opacity-20 crt-overlay"></div>
