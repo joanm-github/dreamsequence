@@ -5,9 +5,11 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ARCHIVIO ANALOGICO | DreamSequence</title>
-    <meta name="description" content="Retrieval of analog data streams. Captured on 35mm film between 1972 and 1980. Filtered technical archive of DreamSequence studio and live works.">
+    <meta name="description"
+        content="Retrieval of analog data streams. Captured on 35mm film between 1972 and 1980. Filtered technical archive of DreamSequence studio and live works.">
     <meta property="og:title" content="DreamSequence | Archivio Analogico">
     <meta property="og:description" content="Imatges capturades en 35mm (1972-1980).">
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,9 +20,9 @@
         rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
     <script src="tailwind-config.js" defer></script>
-    <link rel="stylesheet" href="styles.css?v=1.3">
-    <script src="gallery-data.js?v=2.0"></script>
-    <script src="components.js?v=2.2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=1.4">
+    <script src="gallery-data.js?v=2.1"></script>
+    <script src="components.js?v=2.3" defer></script>
     <link rel="preload" href="assets/logo.jpg" as="image">
     <link rel="preload" href="assets/galery/ds-studio-01.jpeg" as="image">
 </head>
@@ -41,11 +43,9 @@
                     CAPTURED ON 35MM · ARCHIVE TRANSMISSION · ASSETS RECOVERED
                 </p>
             </header>
-
-            <div class="mt-32 border-t border-mustard/10 pt-20">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
-                    <nav
-                        class="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar w-full md:w-auto justify-end pb-2 md:pb-0 scroll-smooth">
+            <div class="mt-32 border-t border-mustard/10 pt-10">
+                <div class="flex justify-end mb-6">
+                    <nav class="flex gap-4 md:gap-8 overflow-x-auto no-scrollbar pt-6 pb-2 md:pb-0 scroll-smooth">
                         <a href="#laboratory"
                             class="text-[10px] md:text-xs font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-mustard hover:text-white transition-all whitespace-nowrap shrink-0 border-b border-transparent hover:border-mustard pb-1">LABORATORY</a>
                         <a href="#live"
@@ -55,6 +55,14 @@
                             PICTURES</a>
                         <a href="#archive"
                             class="text-[10px] md:text-xs font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-mustard hover:text-white transition-all whitespace-nowrap shrink-0 border-b border-transparent hover:border-mustard pb-1">ARCHIVE</a>
+                        <a href="#sequential-art"
+                            class="relative text-[10px] md:text-xs font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] text-mustard hover:text-white transition-all whitespace-nowrap shrink-0 border-b border-transparent hover:border-mustard pb-1">
+                            <span
+                                class="absolute -top-5 -left-2.5 text-[10px] font-black text-[#080808] bg-mustard px-1.5 py-0.5 rounded-xs border border-[#080808] -rotate-12 shadow-[1.5px_1.5px_0px_#e06b24] tracking-wider select-none uppercase font-display">
+                                NEW!
+                            </span>
+                            SEQUENTIAL ART
+                        </a>
                     </nav>
                 </div>
             </div>
@@ -69,12 +77,15 @@
                 <div class="section-separator mb-8">
                     <span class="section-tag">Laboratory_Studies</span>
                 </div>
-                <div class="carousel-wrapper group mb-24">
-                    <div id="laboratory-carousel" class="carousel-container no-scrollbar min-h-[400px]">
+                <div class="carousel-wrapper group">
+                    <div id="laboratory-carousel" class="carousel-container no-scrollbar">
                         <!-- LCP Optimization: Hardcoded first 3 items -->
-                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-01.jpeg')" role="button" aria-label="View larger image of Studio 01">
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer"
+                            onclick="showModal('assets/galery/ds-studio-01.jpeg')" role="button"
+                            aria-label="View larger image of Studio 01">
                             <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
-                                <img src="assets/galery/ds-studio-01.jpeg" class="w-full h-full object-cover" width="1028" height="963" alt="Studio 01" fetchpriority="high">
+                                <img src="assets/galery/ds-studio-01.jpeg" class="w-full h-full object-cover"
+                                    width="1028" height="963" alt="Studio 01" fetchpriority="high">
                             </div>
                             <div class="flex justify-between items-end">
                                 <div class="tech-mono">
@@ -84,9 +95,12 @@
                                 <button class="btn-tech">VIEW</button>
                             </div>
                         </div>
-                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-02.jpeg')" role="button" aria-label="View larger image of Studio 02">
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer"
+                            onclick="showModal('assets/galery/ds-studio-02.jpeg')" role="button"
+                            aria-label="View larger image of Studio 02">
                             <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
-                                <img src="assets/galery/ds-studio-02.jpeg" class="w-full h-full object-cover" width="714" height="1071" alt="Studio 02">
+                                <img src="assets/galery/ds-studio-02.jpeg" class="w-full h-full object-cover"
+                                    width="714" height="1071" alt="Studio 02">
                             </div>
                             <div class="flex justify-between items-end">
                                 <div class="tech-mono">
@@ -96,9 +110,12 @@
                                 <button class="btn-tech">VIEW</button>
                             </div>
                         </div>
-                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer" onclick="showModal('assets/galery/ds-studio-03.jpeg')" role="button" aria-label="View larger image of Studio 03">
+                        <div class="carousel-item w-80 archive-card p-2 cursor-pointer"
+                            onclick="showModal('assets/galery/ds-studio-03.jpeg')" role="button"
+                            aria-label="View larger image of Studio 03">
                             <div class="img-container aspect-square mb-3 bg-[#0c0c0c] overflow-hidden">
-                                <img src="assets/galery/ds-studio-03.jpeg" class="w-full h-full object-cover" width="672" height="896" alt="Studio 03">
+                                <img src="assets/galery/ds-studio-03.jpeg" class="w-full h-full object-cover"
+                                    width="672" height="896" alt="Studio 03">
                             </div>
                             <div class="flex justify-between items-end">
                                 <div class="tech-mono">
@@ -108,12 +125,15 @@
                                 <button class="btn-tech">VIEW</button>
                             </div>
                         </div>
-                        <div class="py-12 text-center w-full tech-mono text-[10px] text-mustard/20 animate-pulse">CONNECTING_TO_ARCHIVE_BUFFER...</div>
+                        <div class="py-12 text-center w-full tech-mono text-[10px] text-mustard/20 animate-pulse">
+                            CONNECTING_TO_ARCHIVE_BUFFER...</div>
                     </div>
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('laboratory-carousel', -300)" aria-label="Previous Laboratory Studies">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('laboratory-carousel', -300)"
+                        aria-label="Previous Laboratory Studies">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('laboratory-carousel', 300)" aria-label="Next Laboratory Studies">
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('laboratory-carousel', 300)"
+                        aria-label="Next Laboratory Studies">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                     </button>
                 </div>
@@ -130,11 +150,13 @@
                     <span class="section-tag">Live_Signal_Archive</span>
                 </div>
                 <div class="carousel-wrapper group">
-                    <div id="carousel-live" class="carousel-container no-scrollbar min-h-[350px]"></div>
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-live', -300)" aria-label="Previous Live Transmissions">
+                    <div id="carousel-live" class="carousel-container no-scrollbar"></div>
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-live', -300)"
+                        aria-label="Previous Live Transmissions">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-live', 300)" aria-label="Next Live Transmissions">
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-live', 300)"
+                        aria-label="Next Live Transmissions">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                     </button>
                 </div>
@@ -151,11 +173,13 @@
                     <span class="section-tag">Tour_Log_archives</span>
                 </div>
                 <div class="carousel-wrapper group">
-                    <div id="carousel-cities" class="carousel-container no-scrollbar min-h-[400px]"></div>
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-cities', -400)" aria-label="Previous City Pictures">
+                    <div id="carousel-cities" class="carousel-container no-scrollbar"></div>
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-cities', -400)"
+                        aria-label="Previous City Pictures">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-cities', 400)" aria-label="Next City Pictures">
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-cities', 400)"
+                        aria-label="Next City Pictures">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                     </button>
                 </div>
@@ -173,10 +197,35 @@
                 </div>
                 <div class="carousel-wrapper group">
                     <div id="carousel-archive" class="carousel-container no-scrollbar"></div>
-                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-archive', -300)" aria-label="Previous Archive Data">
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-archive', -300)"
+                        aria-label="Previous Archive Data">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                     </button>
-                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-archive', 300)" aria-label="Next Archive Data">
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-archive', 300)"
+                        aria-label="Next Archive Data">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SEQUENTIAL ART -->
+            <section id="sequential-art" class="mb-24 scroll-mt-32 px-4 md:px-0">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-[11px] md:text-xs font-bold uppercase text-mustard/60 tracking-[0.3em] shrink-0">
+                        Sequential Art Archives</h2>
+                    <div class="h-px grow bg-mustard/10"></div>
+                </div>
+                <div class="section-separator mb-8">
+                    <span class="section-tag">Sequential_Art_Archives</span>
+                </div>
+                <div class="carousel-wrapper group">
+                    <div id="carousel-sequential" class="carousel-container no-scrollbar"></div>
+                    <button class="carousel-btn btn-left" onclick="scrollCarousel('carousel-sequential', -300)"
+                        aria-label="Previous Sequential Art">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                    </button>
+                    <button class="carousel-btn btn-right" onclick="scrollCarousel('carousel-sequential', 300)"
+                        aria-label="Next Sequential Art">
                         <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                     </button>
                 </div>

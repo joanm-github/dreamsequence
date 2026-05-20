@@ -98,9 +98,9 @@ body {
 
 /* Optimize Carousel Stability */
 .carousel-container {
-    min-height: 400px; /* Aligned with JS injection heights */
     contain: layout;
     display: flex;
+    align-items: flex-start;
     overflow-x: auto;
     gap: 2rem;
 }

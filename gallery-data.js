@@ -9,6 +9,11 @@ window.GALLERY_DATA = {
     {"src": "assets/galery/ds-studio-07.jpg", "alt": "Studio 07", "w": 1195, "h": 896},
     {"src": "assets/galery/ds-studio-08.jpg", "alt": "Studio 08", "w": 1536, "h": 1024}
   ],
+  "sequential": [
+    {"src": "assets/galery/ds-comic-01.jpg", "alt": "Dream Sequence N.1", "desc": "Ivo, il motore del nostro tour non parte!", "w": 682, "h": 1024},
+    {"src": "assets/galery/ds-comic-02.jpg", "alt": "Dream Sequence N.2", "desc": "Operazione Big Moog", "w": 681, "h": 1024},
+    {"src": "assets/galery/ds-comic-03.jpg", "alt": "Dream Sequence N.3", "desc": "Si sono addormentati!!!", "w": 681, "h": 1024}
+  ],
   "live": [
     {"src": "assets/galery/ds-live-01.png", "alt": "Live 01", "w": 880, "h": 1216},
     {"src": "assets/galery/ds-live-09.png", "alt": "Live 09", "w": 664, "h": 1180},

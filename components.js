@@ -440,6 +440,7 @@ window.loadGallery = async (dataUrl = 'gallery-data.json') => {
         }
         
         renderCarousel('laboratory-carousel', data.laboratory, 'lab');
+        renderCarousel('carousel-sequential', data.sequential || [], 'comic');
         renderCarousel('carousel-live', data.live, 'live');
         renderCarousel('carousel-cities', data.city, 'city');
         renderCarousel('carousel-archive', data.archive || [], 'arch');
@@ -476,6 +477,32 @@ function renderCarousel(id, items, type) {
                 </div>`;
         }
         
+        if (type === 'comic') {
+            return `
+                <div class="carousel-item w-72 group cursor-pointer" onclick="showModal('${item.src}')" role="button" aria-label="View large version of ${item.alt}">
+                    <div class="img-container aspect-[2/3] mb-3 overflow-hidden bg-[#0c0c0c] rounded-sm photo-frame-dark relative border border-mustard/10 hover:border-mustard/40 transition-all duration-300">
+                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="${item.w || 682}" height="${item.h || 1024}" alt="${item.alt || 'Comic Cover'}">
+                    </div>
+                    <div class="tech-mono">
+                        <h3 class="text-mustard text-xs font-bold uppercase mb-1">${item.alt}</h3>
+                        <p class="text-[9px] text-white/40 leading-normal line-clamp-1">${item.desc || ''}</p>
+                    </div>
+                </div>`;
+        }
+
+        if (type === 'arch') {
+            return `
+                <div class="carousel-item w-64 archive-card p-2 cursor-pointer" onclick="showModal('${item.src}')" role="button" aria-label="View larger image of ${item.alt}">
+                    <div class="img-container aspect-[3/4] mb-3 bg-[#0c0c0c] overflow-hidden">
+                        <img loading="lazy" src="${item.src}" class="w-full h-full object-cover object-top" width="${item.w || 600}" height="${item.h || 800}" alt="${item.alt || 'Archive item'}">
+                    </div>
+                    <div class="flex justify-between items-center tech-mono text-[9px]">
+                        <span class="text-mustard">${item.alt.toUpperCase()}</span>
+                        <span class="material-symbols-outlined text-[10px] text-cyan-tech">sensors</span>
+                    </div>
+                </div>`;
+        }
+
         const cardClass = type === 'lab' ? 'w-80' : 'w-64';
         const innerContent = type === 'lab' ? `
             <div class="flex justify-between items-end">
