@@ -25,7 +25,7 @@ const Header = () => `
         </nav>
 
         <div class="flex items-center gap-3 md:gap-4 lg:hidden">
-            <button class="text-tobacco dark:text-accent p-1 transition-transform active:scale-95" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+            <button class="text-tobacco dark:text-accent p-1 transition-transform active:scale-95" onclick="toggleMobileMenu()" aria-label="Toggle Menu" id="mobile-menu-toggle">
                 <span class="material-symbols-outlined text-4xl" id="menu-icon" aria-hidden="true">menu</span>
             </button>
         </div>
@@ -38,18 +38,18 @@ const Header = () => `
         <div class="absolute inset-0 pointer-events-none opacity-20 crt-overlay"></div>
         
         <div class="relative h-full flex flex-col px-10 pt-48 pb-16 safe-area-inset overflow-y-auto">
-            <nav class="flex flex-col gap-8 md:gap-12">
-                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
-                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
-                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
-                <a class="text-5xl md:text-7xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
+            <nav class="flex flex-col gap-6 md:gap-8">
+                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
+                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
+                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
+                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
             </nav>
             
             <div class="mt-auto pt-20 flex flex-col gap-8">
                 <div class="h-px w-24 bg-burnt-orange/30"></div>
                 <div class="flex gap-10">
                     <a href="https://www.instagram.com/dreamsequence.italia/" target="_blank" rel="noopener" class="text-mustard/60 hover:text-mustard transition-colors transform hover:scale-110" aria-label="Visit our Instagram profile">
-                        <svg class="size-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        <svg class="size-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
                     </a>
                     <a href="https://dreamsequence3.bandcamp.com" target="_blank" rel="noopener" class="text-mustard/60 hover:text-mustard transition-colors transform hover:scale-110" aria-label="Visit our Bandcamp profile">
                         <svg class="size-8" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
@@ -135,16 +135,15 @@ const initOscilloscope = () => {
 
             ctx.moveTo(0, height / 2);
 
+            const freq1 = 0.008 + (mouseX * 0.02);
+            const freq2 = 0.02 + (scrollIntensity * 0.03);
+            const amp1 = (12 + (scrollIntensity * 25)) * ampScale;
+            const amp2 = (8 + (mouseY * 10)) * ampScale;
+
             for (let x = 0; x < width; x++) {
-                const freq1 = 0.008 + (mouseX * 0.02);
-                const freq2 = 0.02 + (scrollIntensity * 0.03);
-                
                 // Add some "electrical noise" modulation
                 const noise = Math.sin(x * 0.05 + offset * 2) * 2;
                 
-                const amp1 = (12 + (scrollIntensity * 25)) * ampScale;
-                const amp2 = (8 + (mouseY * 10)) * ampScale;
-
                 const y = height / 2 +
                     Math.sin(x * freq1 + offset + shift) * amp1 +
                     Math.cos(x * freq2 + offset * 0.8 + shift) * amp2 +
@@ -361,15 +360,17 @@ window.removeFromCart = (index) => {
     cart.splice(index, 1);
     localStorage.setItem('ds-cart', JSON.stringify(cart));
     updateCartCount();
-    // Refresh page if on checkout
-    if (window.location.pathname.includes('checkout.html')) {
-        location.reload();
-    }
+    // Dispatch custom event to notify checkout page dynamically
+    window.dispatchEvent(new CustomEvent('ds-cart-updated', { detail: { cart } }));
 };
 
 window.updateCartCount = () => {
     const counts = document.querySelectorAll('#cart-count');
     counts.forEach(el => el.innerText = `Cart(${cart.length})`);
+    const mobileBadge = document.getElementById('cart-count-mobile');
+    if (mobileBadge) {
+        mobileBadge.innerText = cart.length;
+    }
 };
 
 window.toggleCart = () => {

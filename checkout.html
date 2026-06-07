@@ -4,16 +4,20 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DreamSequence - Checkout</title>
+    <title>CHECKOUT | DreamSequence Analog Archives</title>
+    <meta name="description" content="Authorize transmission credentials and finalize order of cosmic Trieste analog music artifacts.">
+    <meta property="og:title" content="DreamSequence | Order Checkout">
+    <meta property="og:description" content="Finalize order and authorize telemetry download.">
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
+    <script src="tailwind-config.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js" defer></script>
 </head>
 
 <body
@@ -110,60 +114,73 @@
             </div>
         </main>
 
-        <div id="main-footer"></div>
+        <footer id="main-footer"></footer>
     </div>
 
-    <script src="components.js?v=2.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const list = document.getElementById('checkout-list');
             const totalEl = document.getElementById('checkout-total');
             const form = document.getElementById('checkout-form');
-            const cartItems = JSON.parse(localStorage.getItem('ds-cart')) || [];
 
-            if (cartItems.length === 0) {
-                list.innerHTML = `
-                    <div class="py-12 text-center">
-                        <span class="material-symbols-outlined text-6xl text-tobacco/30 mb-4">signal_disconnected</span>
-                        <p class="text-tobacco/50 font-mono uppercase text-xs tracking-widest">No signals found in the archives.</p>
-                        <a href="collection.html" class="inline-block mt-6 text-mustard border border-mustard/20 px-6 py-2 hover:bg-mustard hover:text-background-dark transition-all text-xs uppercase font-black">Browse Signals</a>
-                    </div>
-                `;
-                if (form) form.classList.add('opacity-50', 'pointer-events-none');
-                return;
+            function renderCheckout() {
+                const cartItems = JSON.parse(localStorage.getItem('ds-cart')) || [];
+
+                if (cartItems.length === 0) {
+                    list.innerHTML = `
+                        <div class="py-12 text-center animate-in fade-in duration-300">
+                            <span class="material-symbols-outlined text-6xl text-tobacco/30 mb-4" aria-hidden="true">signal_disconnected</span>
+                            <p class="text-tobacco/50 font-mono uppercase text-xs tracking-widest">No signals found in the archives.</p>
+                            <a href="merch.html" class="inline-block mt-6 text-mustard border border-mustard/20 px-6 py-2 hover:bg-mustard hover:text-background-dark transition-all text-xs uppercase font-black">Browse Artifacts</a>
+                        </div>
+                    `;
+                    if (form) form.classList.add('opacity-50', 'pointer-events-none');
+                    totalEl.innerText = '0.00€';
+                    return;
+                }
+
+                if (form) form.classList.remove('opacity-50', 'pointer-events-none');
+
+                let total = 0;
+                list.innerHTML = cartItems.map((item, idx) => {
+                    total += item.price;
+                    return `
+                        <div class="flex items-center gap-6 group hover:bg-white/5 p-2 transition-colors rounded-sm animate-in fade-in duration-300">
+                            <div class="size-20 rounded-sm overflow-hidden border border-mustard/20 photo-frame-dark flex-shrink-0">
+                                <img src="${item.img}" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" alt="${item.name}">
+                            </div>
+                            <div class="flex-1 flex flex-col gap-1">
+                                <h3 class="text-xl font-black uppercase text-mustard tracking-tight">${item.name}</h3>
+                                <p class="text-[10px] text-burnt-orange font-mono uppercase tracking-widest">Signal Artifact • Unit ${idx + 1}</p>
+                            </div>
+                            <div class="flex flex-col items-end gap-2">
+                                <span class="font-black text-accent text-2xl tracking-tighter">${item.price}€</span>
+                                <button onclick="removeFromCart(${idx})" class="text-burnt-orange opacity-40 hover:opacity-100 transition-opacity flex items-center gap-1" title="Remove Transmission">
+                                    <span class="material-symbols-outlined text-xs" aria-hidden="true">close</span>
+                                    <span class="text-[10px] font-mono uppercase font-bold">Purge</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                totalEl.innerText = `${total.toFixed(2)}€`;
             }
 
-            let total = 0;
-            list.innerHTML = cartItems.map((item, idx) => {
-                total += item.price;
-                return `
-                    <div class="flex items-center gap-6 group hover:bg-white/5 p-2 transition-colors rounded-sm">
-                        <div class="size-20 rounded-sm overflow-hidden border border-mustard/20 photo-frame-dark flex-shrink-0">
-                            <img src="${item.img}" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <div class="flex-1 flex flex-col gap-1">
-                            <h3 class="text-xl font-black uppercase text-mustard tracking-tight">${item.name}</h3>
-                            <p class="text-[10px] text-burnt-orange font-mono uppercase tracking-widest">Signal Artifact • Unit ${idx + 1}</p>
-                        </div>
-                        <div class="flex flex-col items-end gap-2">
-                            <span class="font-black text-accent text-2xl tracking-tighter">${item.price}€</span>
-                            <button onclick="removeFromCart(${idx})" class="text-burnt-orange opacity-40 hover:opacity-100 transition-opacity flex items-center gap-1" title="Remove Transmission">
-                                <span class="material-symbols-outlined text-xs">close</span>
-                                <span class="text-[10px] font-mono uppercase font-bold">Purge</span>
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
+            renderCheckout();
 
-            totalEl.innerText = `${total.toFixed(2)}€`;
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert("SUCCESS: Payment Signal Transmitted!\n\nYour cosmic artifacts are being prepared. Check your email for confirmation.");
-                localStorage.removeItem('ds-cart');
-                window.location.href = 'index.html';
+            window.addEventListener('ds-cart-updated', () => {
+                renderCheckout();
             });
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert("SUCCESS: Payment Signal Transmitted!\n\nYour cosmic artifacts are being prepared. Check your email for confirmation.");
+                    localStorage.removeItem('ds-cart');
+                    window.location.href = 'index.html';
+                });
+            }
         });
     </script>
 </body>
