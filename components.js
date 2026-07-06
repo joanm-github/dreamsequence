@@ -327,7 +327,8 @@ const ALBUM_LINKS = {
     'ICA London': 'https://dreamsequence3.bandcamp.com/album/live-at-the-ica',
     'KS Session': 'https://dreamsequence3.bandcamp.com/album/ks-session',
     'Rozzol Pulse': 'https://dreamsequence3.bandcamp.com/album/rozzol-pulse',
-    'Kyoto': 'https://dreamsequence3.bandcamp.com/album/kyoto-1980'
+    'Kyoto': 'https://dreamsequence3.bandcamp.com/album/kyoto-1980',
+    'Night 1 Tokio 1980': 'https://dreamsequence3.bandcamp.com/album/night-1-tokyo-1980'
 };
 
 window.playAlbum = (title) => {
