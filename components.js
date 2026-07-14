@@ -319,6 +319,7 @@ window.closeModal = () => {
 const ALBUM_LINKS = {
     'Nebbia': 'https://dreamsequence3.bandcamp.com/album/nebbia',
     'Sequence': 'https://dreamsequence3.bandcamp.com/album/sequence',
+    'Nebula': 'https://dreamsequence3.bandcamp.com/album/nebula',
     'The Euclidean Sea': 'https://dreamsequence3.bandcamp.com/album/the-euclidean-sea',
     'Bellas Artes': 'https://dreamsequence3.bandcamp.com/album/auditorio-c-rculo-de-bellas-artes-madrid',
     'Massana': 'https://dreamsequence3.bandcamp.com/album/escola-massana-barcelona',
