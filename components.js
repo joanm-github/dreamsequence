@@ -330,7 +330,8 @@ const ALBUM_LINKS = {
     'KS Session': 'https://dreamsequence3.bandcamp.com/album/ks-session',
     'Rozzol Pulse': 'https://dreamsequence3.bandcamp.com/album/rozzol-pulse',
     'Kyoto': 'https://dreamsequence3.bandcamp.com/album/kyoto-1980',
-    'Night 1 Tokio 1980': 'https://dreamsequence3.bandcamp.com/album/night-1-tokyo-1980'
+    'Night 1 Tokio 1980': 'https://dreamsequence3.bandcamp.com/album/night-1-tokyo-1980',
+    'Berlin': 'https://dreamsequence3.bandcamp.com/album/berlin-79'
 };
 
 window.playAlbum = (title) => {

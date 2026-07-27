@@ -32,7 +32,8 @@ window.GALLERY_DATA = {
     {"src": "assets/galery/ds-tours-03.jpg", "alt": "02B_1978", "desc": "Visual light patterns recorded on transit. Exposure 4.5s.", "w": 512, "h": 452},
     {"src": "assets/galery/ds-tours-04.png", "alt": "04D_1976", "desc": "La Gomera. Canary Islands. 1976", "w": 1088, "h": 960},
     {"src": "assets/galery/ds-tours-05.jpg", "alt": "05E_1976", "desc": "Atomium, Brussels. 1976", "w": 1088, "h": 960},
-    {"src": "assets/galery/ds-tours-06.JPG", "alt": "06F_1977", "desc": "Dream Sequence: Il Quadrilatero (Live in Trieste, 1977)", "w": 832, "h": 1292}
+    {"src": "assets/galery/ds-tours-06.JPG", "alt": "06F_1977", "desc": "Dream Sequence: Il Quadrilatero (Live in Trieste, 1977)", "w": 832, "h": 1292},
+    {"src": "assets/galery/ds-tours-07.jpg", "alt": "07G_1979", "desc": "Theater am Halleschen Ufer, West Berlin. 1979", "w": 638, "h": 851}
   ],
   "archive": [
     {"src": "assets/galery/ds-archive-01.jpeg", "alt": "MEM_ARCH_01", "w": 1028, "h": 963},
