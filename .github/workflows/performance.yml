@@ -5,6 +5,11 @@ on:
   pull_request:
     branches: [ main ]
 
+# Cancel any in-progress audit for the same branch/PR
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
