@@ -1,0 +1,4 @@
+Trigger GitHub Pages rebuild
+
+Committed by GitHub Copilot on behalf of joanm-github to force rebuild.
+Timestamp: 2026-08-06T17:12:00Z
