@@ -196,10 +196,11 @@ const Footer = () => `
         </div>
 
         <!-- Rights & Terminal -->
-        <div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col items-center">
+        <div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-row items-center gap-4">
             <p class="text-[9px] text-tobacco/40 uppercase tracking-[0.3em] font-mono whitespace-nowrap">
                 © 2024 DreamSequence Archives • Terminal DS-72
             </p>
+            <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-14 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
         </div>
 
         <!-- Social Links -->
@@ -332,7 +333,8 @@ const ALBUM_LINKS = {
     'Kyoto': 'https://dreamsequence3.bandcamp.com/album/kyoto-1980',
     'Night 1 Tokio 1980': 'https://dreamsequence3.bandcamp.com/album/night-1-tokyo-1980',
     'Berlin': 'https://dreamsequence3.bandcamp.com/album/berlin-79',
-    'The Dreamers': 'https://dreamsequence3.bandcamp.com/album/the-dreamers'
+    'The Dreamers': 'https://dreamsequence3.bandcamp.com/album/the-dreamers',
+    'Structures Sonores': 'https://dreamsequence3.bandcamp.com/album/structures-sonores-pour-syst-mes'
 };
 
 window.playAlbum = (title) => {
