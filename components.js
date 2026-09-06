@@ -174,45 +174,47 @@ const initOscilloscope = () => {
 
 const Footer = () => `
 <footer class="mt-auto border-t border-mustard/10 bg-background-dark py-8 px-6 mb-24 md:mb-0 relative">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="flex flex-col md:flex-row items-center gap-6">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform">
-                    <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover" width="597" height="571" loading="lazy">
+    <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <a href="index.html" class="flex items-center gap-4 group">
+                    <div class="size-10 overflow-hidden rounded-full border border-mustard/30 shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                        <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover" width="597" height="571" loading="lazy">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-black tracking-tight text-mustard uppercase leading-none">DreamSequence</span>
+                        <span class="text-[8px] text-burnt-orange font-mono mt-1 uppercase tracking-widest opacity-70">Trieste • Since 1972</span>
+                    </div>
+                </a>
+                
+                <!-- Partner Logos -->
+                <div class="flex items-center gap-3">
+                    <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari Records Logo" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
+                    <div class="flex items-center -translate-y-1 mix-blend-screen">
+                        <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-16 md:h-24 w-auto opacity-80" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-10 md:h-14 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-lg font-black tracking-tight text-mustard uppercase leading-none">DreamSequence</span>
-                    <span class="text-[8px] text-burnt-orange font-mono mt-1 uppercase tracking-widest opacity-70">Trieste • Since 1972</span>
-                </div>
-            </a>
-            
-            <!-- Partner Logos -->
-            <div class="flex items-center gap-3 ml-0 md:ml-4">
-                <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari Records Logo" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
-                <div class="flex items-center -translate-y-1 mix-blend-screen">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-16 md:h-24 w-auto opacity-80" width="1024" height="1024" loading="lazy">
-                </div>
-                <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-10 md:h-14 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-6">
+                <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://www.instagram.com/dreamsequence.italia/" target="_blank" rel="noopener" aria-label="Visit our Instagram profile">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                </a>
+                <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://dreamsequence3.bandcamp.com" target="_blank" rel="noopener" aria-label="Visit our Bandcamp profile">
+                    <span class="sr-only">Bandcamp</span>
+                    <svg class="size-5" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
+                </a>
             </div>
         </div>
 
-        <!-- Rights & Terminal -->
-        <div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
-            <p class="text-[9px] text-tobacco/40 uppercase tracking-[0.3em] font-mono whitespace-nowrap text-center">
-                © 2024 DreamSequence Archives • Terminal DS-72
+        <!-- Rights & Terminal Bottom Row -->
+        <div class="pt-4 border-t border-mustard/10 w-full text-center">
+            <p class="text-[10px] text-mustard/40 uppercase tracking-[0.3em] font-mono">
+                © 2026 DreamSequence Archives • Terminal DS-72
             </p>
-        </div>
-
-        <!-- Social Links -->
-        <div class="flex items-center gap-6">
-            <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://www.instagram.com/dreamsequence.italia/" target="_blank" rel="noopener">
-                <span class="sr-only">Instagram</span>
-                <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-            </a>
-            <a class="text-mustard/60 hover:text-mustard transition-colors" href="https://dreamsequence3.bandcamp.com" target="_blank" rel="noopener" aria-label="Visit our Bandcamp profile">
-                <span class="sr-only">Bandcamp</span>
-                <svg class="size-5" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
-            </a>
         </div>
     </div>
 </footer>
