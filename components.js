@@ -334,7 +334,8 @@ const ALBUM_LINKS = {
     'Night 1 Tokio 1980': 'https://dreamsequence3.bandcamp.com/album/night-1-tokyo-1980',
     'Berlin': 'https://dreamsequence3.bandcamp.com/album/berlin-79',
     'The Dreamers': 'https://dreamsequence3.bandcamp.com/album/the-dreamers',
-    'Structures Sonores': 'https://dreamsequence3.bandcamp.com/album/structures-sonores-pour-syst-mes'
+    'Structures Sonores': 'https://dreamsequence3.bandcamp.com/album/structures-sonores-pour-syst-mes',
+    'Memoria Futura': 'https://dreamsequence3.bandcamp.com/album/memoria-futura'
 };
 
 window.playAlbum = (title) => {
