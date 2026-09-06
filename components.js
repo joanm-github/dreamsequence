@@ -187,20 +187,20 @@ const Footer = () => `
             </a>
             
             <!-- Partner Logos -->
-            <div class="flex items-center gap-2 ml-4">
+            <div class="flex items-center gap-3 ml-0 md:ml-4">
                 <img src="./assets/logos/suoni_rari_color.png" alt="Suoni Rari Records Logo" class="h-8 md:h-12 w-auto transition-all" width="237" height="237" loading="lazy">
-                <div class="flex items-center -translate-y-2 mix-blend-screen">
-                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-24 md:h-32 w-auto opacity-80" width="1024" height="1024" loading="lazy">
+                <div class="flex items-center -translate-y-1 mix-blend-screen">
+                    <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-16 md:h-24 w-auto opacity-80" width="1024" height="1024" loading="lazy">
                 </div>
+                <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-10 md:h-14 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
             </div>
         </div>
 
         <!-- Rights & Terminal -->
-        <div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-row items-center gap-4">
-            <p class="text-[9px] text-tobacco/40 uppercase tracking-[0.3em] font-mono whitespace-nowrap">
+        <div class="md:absolute md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+            <p class="text-[9px] text-tobacco/40 uppercase tracking-[0.3em] font-mono whitespace-nowrap text-center">
                 © 2024 DreamSequence Archives • Terminal DS-72
             </p>
-            <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-14 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
         </div>
 
         <!-- Social Links -->
