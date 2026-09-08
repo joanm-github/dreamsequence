@@ -12,50 +12,62 @@ const Header = () => `
                 <img src="assets/logo.jpg" alt="DreamSequence Logo" class="w-full h-full object-cover" width="597" height="571">
             </div>
             <div class="flex flex-col">
-                <h2 class="text-lg md:text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard leading-tight">Dream Sequence</h2>
+                <h2 class="text-lg md:text-xl font-bold tracking-widest uppercase text-tobacco dark:text-mustard leading-tight group-hover:text-accent transition-colors">Dream Sequence</h2>
                 <span class="text-[8px] font-mono text-burnt-orange uppercase tracking-[0.3em] opacity-70 hidden md:block">Analog Monitoring Active</span>
             </div>
         </a>
         
         <nav class="hidden lg:flex items-center gap-8">
-            <a class="nav-link" href="biography.html">Biography</a>
-            <a class="nav-link" href="collection.html">Discography</a>
-            <a class="nav-link" href="gallery.html">Gallery</a>
-            <a class="nav-link" href="tours.html">Tours</a>
+            <a class="nav-link text-mustard/90 hover:text-accent transition-colors" href="biography.html">Biography</a>
+            <a class="nav-link text-mustard/90 hover:text-accent transition-colors" href="collection.html">Discography</a>
+            <a class="nav-link text-mustard/90 hover:text-accent transition-colors" href="gallery.html">Gallery</a>
+            <a class="nav-link text-mustard/90 hover:text-accent transition-colors" href="tours.html">Tours</a>
         </nav>
 
         <div class="flex items-center gap-3 md:gap-4 lg:hidden">
-            <button class="text-tobacco dark:text-accent p-1 transition-transform active:scale-95" onclick="toggleMobileMenu()" aria-label="Toggle Menu" id="mobile-menu-toggle">
-                <span class="material-symbols-outlined text-4xl" id="menu-icon" aria-hidden="true">menu</span>
+            <button class="relative z-[220] text-tobacco dark:text-accent p-2 rounded-md hover:bg-mustard/15 active:scale-90 transition-all flex items-center justify-center cursor-pointer" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" id="mobile-menu-toggle">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon" aria-hidden="true">menu</span>
             </button>
         </div>
     </div>
     
     <!-- Mobile Menu Overlay (Wolf Alice inspired) -->
-    <div id="mobile-menu" class="fixed inset-0 z-[200] hidden bg-cosmic-black lg:hidden animate-in fade-in duration-500 overflow-hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[200] hidden bg-cosmic-black lg:hidden animate-in fade-in duration-500 overflow-hidden flex-col">
         <!-- Noise Texture Layers -->
         <div class="absolute inset-0 pointer-events-none opacity-40 bg-noise mix-blend-overlay"></div>
         <div class="absolute inset-0 pointer-events-none opacity-20 crt-overlay"></div>
+
+        <!-- Dedicated Mobile Header Bar with Accessible Close CTA -->
+        <div class="relative z-[230] flex items-center justify-between px-6 py-4 border-b border-mustard/15 bg-black/40 backdrop-blur-md shrink-0">
+            <div class="flex items-center gap-2">
+                <span class="size-2 rounded-full bg-mustard animate-ping"></span>
+                <span class="text-[11px] font-mono text-mustard uppercase tracking-widest">DS-72 Archive Terminal</span>
+            </div>
+            <button onclick="toggleMobileMenu()" class="text-mustard hover:text-white p-2 rounded-md hover:bg-mustard/15 transition-all flex items-center gap-1.5 active:scale-90 cursor-pointer" aria-label="Close navigation menu">
+                <span class="text-[10px] font-mono uppercase tracking-widest hidden xs:inline">CLOSE</span>
+                <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+            </button>
+        </div>
         
-        <div class="relative h-full flex flex-col px-10 pt-48 pb-16 safe-area-inset overflow-y-auto">
-            <nav class="flex flex-col gap-6 md:gap-8">
-                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
-                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
-                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
-                <a class="text-4xl md:text-6xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-4 focus:pl-4" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
+        <div class="relative h-full flex flex-col px-8 pt-6 pb-12 safe-area-inset overflow-y-auto">
+            <nav class="flex flex-col gap-6">
+                <a class="text-3xl md:text-5xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-3 focus:pl-3" href="biography.html" onclick="toggleMobileMenu()">Biography</a>
+                <a class="text-3xl md:text-5xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-3 focus:pl-3" href="collection.html" onclick="toggleMobileMenu()">Discography</a>
+                <a class="text-3xl md:text-5xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-3 focus:pl-3" href="gallery.html" onclick="toggleMobileMenu()">Gallery</a>
+                <a class="text-3xl md:text-5xl font-bold uppercase tracking-tight text-mustard hover:text-accent transition-all hover:pl-3 focus:pl-3" href="tours.html" onclick="toggleMobileMenu()">Tours</a>
             </nav>
             
-            <div class="mt-auto pt-20 flex flex-col gap-8">
+            <div class="mt-auto pt-8 flex flex-col gap-6">
                 <div class="h-px w-24 bg-burnt-orange/30"></div>
-                <div class="flex gap-10">
+                <div class="flex gap-8 items-center">
                     <a href="https://www.instagram.com/dreamsequence.italia/" target="_blank" rel="noopener" class="text-mustard/60 hover:text-mustard transition-colors transform hover:scale-110" aria-label="Visit our Instagram profile">
-                        <svg class="size-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        <svg class="size-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
                     </a>
                     <a href="https://dreamsequence3.bandcamp.com" target="_blank" rel="noopener" class="text-mustard/60 hover:text-mustard transition-colors transform hover:scale-110" aria-label="Visit our Bandcamp profile">
-                        <svg class="size-8" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
+                        <svg class="size-7" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"></path></svg>
                     </a>
                 </div>
-                <p class="text-[10px] uppercase font-mono tracking-[0.4em] text-mustard/40">Trieste Archive Terminal DS-72</p>
+                <p class="text-[9px] uppercase font-mono tracking-[0.4em] text-mustard/40">Trieste Archive Terminal DS-72</p>
             </div>
         </div>
     </div>
@@ -86,7 +98,7 @@ const initScrollListener = () => {
             nav?.classList.remove('border-mustard/20');
         }
     });
-};;
+};
 
 // Oscilloscope Generator
 const initOscilloscope = () => {
@@ -98,17 +110,29 @@ const initOscilloscope = () => {
     let height = canvas.height = 48;
     let offset = 0;
     let scrollIntensity = 0;
+    let hoverBoost = 0;
     let mouseX = 0;
     let mouseY = 0;
 
+    window.pulseOscilloscope = (amount = 1.0) => {
+        hoverBoost = Math.min(2.0, Math.max(hoverBoost, amount));
+    };
+
+    // Micro-interaction: oscilloscope reacts dynamically to cursor moving over interactive items
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest('a, button, .interactive-card, .archive-card, .photo-frame')) {
+            window.pulseOscilloscope(0.6);
+        }
+    }, { passive: true });
+
     window.addEventListener('scroll', () => {
         scrollIntensity = Math.min(window.scrollY * 0.002, 2);
-    });
+    }, { passive: true });
 
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX / window.innerWidth;
         mouseY = e.clientY / window.innerHeight;
-    });
+    }, { passive: true });
 
     let isVisible = true;
     const observer = new IntersectionObserver((entries) => {
@@ -129,19 +153,16 @@ const initOscilloscope = () => {
             ctx.lineWidth = color === '#29B6B6' ? (opacity > 0.5 ? 2 : 4) : 1.5;
             ctx.strokeStyle = color;
             ctx.globalAlpha = opacity;
-            
-            // Replaced expensive shadowBlur with layered strokes for performance
             ctx.shadowBlur = 0; 
 
             ctx.moveTo(0, height / 2);
 
-            const freq1 = 0.008 + (mouseX * 0.02);
+            const freq1 = 0.008 + (mouseX * 0.02) + (hoverBoost * 0.005);
             const freq2 = 0.02 + (scrollIntensity * 0.03);
-            const amp1 = (12 + (scrollIntensity * 25)) * ampScale;
-            const amp2 = (8 + (mouseY * 10)) * ampScale;
+            const amp1 = (12 + (scrollIntensity * 25) + (hoverBoost * 14)) * ampScale;
+            const amp2 = (8 + (mouseY * 10) + (hoverBoost * 8)) * ampScale;
 
             for (let x = 0; x < width; x++) {
-                // Add some "electrical noise" modulation
                 const noise = Math.sin(x * 0.05 + offset * 2) * 2;
                 
                 const y = height / 2 +
@@ -160,7 +181,10 @@ const initOscilloscope = () => {
         // Draw main wave
         drawWave('#29B6B6', 0.8, 0, 1);
 
-        offset += 0.04 + (scrollIntensity * 0.08);
+        offset += 0.04 + (scrollIntensity * 0.08) + (hoverBoost * 0.03);
+        if (hoverBoost > 0) {
+            hoverBoost = Math.max(0, hoverBoost - 0.025);
+        }
         requestAnimationFrame(draw);
     };
 
@@ -343,14 +367,14 @@ const ALBUM_LINKS = {
 window.playAlbum = (title) => {
     const url = ALBUM_LINKS[title];
     if (url) {
-        // Visual feedback for "tape load"
+        if (window.pulseOscilloscope) window.pulseOscilloscope(1.8);
         const overlay = document.querySelector('.crt-overlay');
         if (overlay) {
             overlay.style.animationDuration = '0.05s';
-            setTimeout(() => overlay.style.animationDuration = '0.15s', 500);
+            setTimeout(() => overlay.style.animationDuration = '0.15s', 450);
         }
         showToast(`TRANSMISSION_START: ${title.toUpperCase()}...`);
-        setTimeout(() => window.open(url, '_blank'), 600);
+        setTimeout(() => window.open(url, '_blank'), 500);
     } else {
         showToast(`'${title}' is not available yet`);
     }
@@ -363,6 +387,7 @@ window.addToCart = (name, price, img) => {
     cart.push({ name, price, img });
     localStorage.setItem('ds-cart', JSON.stringify(cart));
     updateCartCount();
+    if (window.pulseOscilloscope) window.pulseOscilloscope(1.0);
     showToast(`${name} added to the archives`);
 };
 
@@ -370,7 +395,6 @@ window.removeFromCart = (index) => {
     cart.splice(index, 1);
     localStorage.setItem('ds-cart', JSON.stringify(cart));
     updateCartCount();
-    // Dispatch custom event to notify checkout page dynamically
     window.dispatchEvent(new CustomEvent('ds-cart-updated', { detail: { cart } }));
 };
 
@@ -389,44 +413,53 @@ window.toggleCart = () => {
 
 window.showToast = (msg) => {
     const toast = document.createElement('div');
-    toast.className = 'fixed bottom-24 right-6 bg-mustard text-background-dark px-6 py-3 rounded-sm shadow-2xl z-[100] font-bold uppercase text-xs tracking-widest border border-background-dark animate-in slide-in-from-right fade-in duration-300';
-    toast.innerText = msg;
+    toast.className = 'fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-[#141210] text-[#f3e5ab] px-5 py-3.5 rounded border border-mustard/60 shadow-[0_10px_30px_rgba(0,0,0,0.8)] z-[250] font-mono text-xs tracking-widest flex items-center gap-3 backdrop-blur-md transition-all duration-300 transform translate-y-4 opacity-0';
+    toast.innerHTML = `
+        <span class="size-2 rounded-full bg-mustard animate-ping shrink-0"></span>
+        <span class="font-bold uppercase tracking-wider">${msg}</span>
+    `;
     document.body.appendChild(toast);
+    
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+    });
+
     setTimeout(() => {
-        toast.classList.add('animate-out', 'slide-out-to-right', 'fade-out');
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
+        toast.classList.add('translate-y-4', 'opacity-0');
+        setTimeout(() => toast.remove(), 350);
+    }, 2800);
 };
 
 window.toggleMobileMenu = () => {
     const menu = document.getElementById('mobile-menu');
     const icon = document.getElementById('menu-icon');
-    const headerNav = document.getElementById('main-header-nav');
 
-    if (menu && icon && headerNav) {
+    if (menu) {
         const isHidden = menu.classList.contains('hidden');
         if (isHidden) {
             menu.classList.remove('hidden');
             menu.classList.add('flex');
-            icon.innerText = 'close';
+            if (icon) icon.innerText = 'close';
             document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
 
-            // Add animation to links
+            // Staggered link animation
             const links = menu.querySelectorAll('nav a');
             links.forEach((link, i) => {
                 link.style.opacity = '0';
-                link.style.transform = 'translateY(20px)';
+                link.style.transform = 'translateY(16px)';
                 setTimeout(() => {
-                    link.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                    link.style.transition = 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
                     link.style.opacity = '1';
                     link.style.transform = 'translateY(0)';
-                }, 100 + (i * 100));
+                }, 60 + (i * 60));
             });
         } else {
             menu.classList.add('hidden');
             menu.classList.remove('flex');
-            icon.innerText = 'menu';
+            if (icon) icon.innerText = 'menu';
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
         }
@@ -577,7 +610,13 @@ window.addEventListener('resize', () => {
 });
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') window.closeModal();
+    if (e.key === 'Escape') {
+        window.closeModal();
+        const menu = document.getElementById('mobile-menu');
+        if (menu && !menu.classList.contains('hidden')) {
+            window.toggleMobileMenu();
+        }
+    }
 });
 
 

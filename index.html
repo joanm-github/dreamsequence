@@ -92,15 +92,15 @@
                                 analog dreams through Moog circuitry. Experience the sound of the future that never
                                 was.
                             </p>
-                            <div class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+                            <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 justify-center lg:justify-start w-full sm:w-auto">
                                 <a href="https://dreamsequence3.bandcamp.com/music" target="_blank"
-                                    class="group flex items-center justify-center gap-3 rounded-lg bandcamp-btn px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all">
-                                    <span class="material-symbols-outlined group-hover:animate-spin" aria-hidden="true">album</span>
+                                    class="group flex items-center justify-center gap-3 rounded-lg bandcamp-btn px-6 md:px-8 py-3.5 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all text-white active:scale-95 cursor-pointer shadow-lg hover:shadow-cyan-900/40">
+                                    <span class="material-symbols-outlined transition-transform duration-500 group-hover:rotate-180" aria-hidden="true">album</span>
                                     Listen to the Cosmos
                                 </a>
                                 <a href="biography.html"
-                                    class="flex items-center justify-center gap-3 rounded-lg border border-tobacco bg-[#2a1a10]/50 hover:bg-[#3e2723] text-mustard px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all backdrop-blur-sm">
-                                    <span class="material-symbols-outlined" aria-hidden="true">history_edu</span>
+                                    class="group flex items-center justify-center gap-3 rounded-lg border border-mustard/40 bg-[#2a1a10]/60 hover:bg-[#3e2723] hover:border-mustard text-mustard hover:text-white px-6 md:px-8 py-3.5 md:py-4 text-sm md:text-base font-bold uppercase tracking-wider transition-all backdrop-blur-sm shadow-md hover:shadow-mustard/20 hover:-translate-y-0.5 active:translate-y-0.5 active:scale-95 cursor-pointer">
+                                    <span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110" aria-hidden="true">history_edu</span>
                                     Our Story
                                 </a>
                             </div>
@@ -158,10 +158,10 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div
-                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-burnt-orange transition-all hover:shadow-[0_0_20px_rgba(192,86,33,0.15)]">
+                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-burnt-orange transition-all interactive-card hover:shadow-[0_10px_25px_rgba(192,86,33,0.2)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Sequence 1973.jpg" alt="Sequence Album Cover (1973)"
-                                    class="w-full h-full object-cover opacity-80"
+                                    class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
                                     width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
@@ -171,7 +171,7 @@
                                 <span
                                     class="text-accent font-mono text-[10px] tracking-widest uppercase mb-2 block">Vol.
                                     I • 1973</span>
-                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter">Sequence
+                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter group-hover:text-accent transition-colors">Sequence
                                 </h3>
                                 <p class="text-[#8d6e63] dark:text-[#a1887f] text-sm mt-1">The debut masterpiece.
                                     Pure analog signal paths and deep space echoes.</p>
@@ -179,15 +179,15 @@
                             <button
                                 aria-label="Play Sequence (1973)"
                                 onclick="playAlbum('Sequence', 'Sequence (1973)', 'assets/lp/Sequence 1973.jpg', 'https://dreamsequence3.bandcamp.com/')"
-                                class="mt-auto flex items-center gap-2 text-mustard font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
-                                Play <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                class="mt-auto flex items-center gap-2 text-mustard hover:text-accent font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all active:scale-95 cursor-pointer">
+                                Play <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                             </button>
                         </div>
                         <div
-                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-mustard transition-all hover:shadow-[0_0_20px_rgba(214,158,46,0.15)]">
+                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-mustard transition-all interactive-card hover:shadow-[0_10px_25px_rgba(214,158,46,0.2)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Ganimede 1975.jpg" alt="Ganimede Album Cover (1975)"
-                                    class="w-full h-full object-cover opacity-80"
+                                    class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
                                     width="2048" height="2048" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
@@ -197,7 +197,7 @@
                                 <span
                                     class="text-accent font-mono text-[10px] tracking-widest uppercase mb-2 block">Vol.
                                     II • 1975</span>
-                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter">Ganimede
+                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter group-hover:text-accent transition-colors">Ganimede
                                 </h3>
                                 <p class="text-[#8d6e63] dark:text-[#a1887f] text-sm mt-1">Introducing rhythm and
                                     sequence.
@@ -205,15 +205,15 @@
                             </div>
                             <button
                                 onclick="playAlbum('Ganimede', 'Ganimede (1975)', 'assets/lp/Ganimede 1975.jpg', 'https://dreamsequence3.bandcamp.com')"
-                                class="mt-auto flex items-center gap-2 text-mustard font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
-                                Play <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                class="mt-auto flex items-center gap-2 text-mustard hover:text-accent font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all active:scale-95 cursor-pointer">
+                                Play <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                             </button>
                         </div>
                         <div
-                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-tobacco transition-all hover:shadow-[0_0_20px_rgba(93,64,55,0.25)]">
+                            class="group relative flex flex-col gap-4 p-6 rounded-sm border border-[#d69e2e]/20 dark:border-[#5d4037] bg-[#fdfbf7] dark:bg-[#221e1b] hover:border-tobacco transition-all interactive-card hover:shadow-[0_10px_25px_rgba(93,64,55,0.3)]">
                             <div class="relative aspect-square w-full rounded-sm overflow-hidden bg-[#120f0e]">
                                 <img src="assets/lp/Nebbia 1976.png" alt="Nebbia Album Cover (1976)"
-                                    class="w-full h-full object-cover opacity-80"
+                                    class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
                                     width="1024" height="1024" loading="lazy" decoding="async">
                                 <div
                                     class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
@@ -223,15 +223,15 @@
                                 <span
                                     class="text-accent font-mono text-[10px] tracking-widest uppercase mb-2 block">Vol.
                                     III • 1976</span>
-                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter">Nebbia
+                                <h3 class="text-3xl font-black uppercase text-mustard tracking-tighter group-hover:text-accent transition-colors">Nebbia
                                 </h3>
                                 <p class="text-[#8d6e63] dark:text-[#a1887f] text-sm mt-1">The final transmission. A
                                     monolithic exploration of geometry and sound. Our magnum opus.</p>
                             </div>
                             <button
                                 onclick="playAlbum('Nebbia', 'Nebbia (1976)', 'assets/lp/Nebbia 1976.png', 'https://dreamsequence3.bandcamp.com/album/nebbia-1976')"
-                                class="mt-auto flex items-center gap-2 text-mustard font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
-                                Play <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                class="mt-auto flex items-center gap-2 text-mustard hover:text-accent font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all active:scale-95 cursor-pointer">
+                                Play <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                             </button>
                         </div>
                     </div>
