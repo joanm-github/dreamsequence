@@ -361,7 +361,9 @@ const ALBUM_LINKS = {
     'Berlin': 'https://dreamsequence3.bandcamp.com/album/berlin-79',
     'The Dreamers': 'https://dreamsequence3.bandcamp.com/album/the-dreamers',
     'Structures Sonores': 'https://dreamsequence3.bandcamp.com/album/structures-sonores-pour-syst-mes',
-    'Memoria Futura': 'https://dreamsequence3.bandcamp.com/album/memoria-futura'
+    'Memoria Futura': 'https://dreamsequence3.bandcamp.com/album/memoria-futura',
+    'Elektronika Zeď': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976',
+    'Live Prague': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976'
 };
 
 window.playAlbum = (title) => {
