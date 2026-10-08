@@ -5,8 +5,7 @@ window.GALLERY_DATA = {
     {"src": "assets/galery/ds-studio-03.png", "alt": "Studio 03", "w": 879, "h": 879},
     {"src": "assets/galery/ds-studio-04.jpg", "alt": "Studio 04", "w": 1219, "h": 812},
     {"src": "assets/galery/ds-studio-05.png", "alt": "Studio 05", "w": 880, "h": 880},
-    {"src": "assets/galery/ds-studio-06.jpg", "alt": "Studio 06", "w": 720, "h": 1440},
-    {"src": "assets/galery/ds-studio-07.jpg", "alt": "Studio 07", "w": 720, "h": 1440}
+    {"src": "assets/galery/ds-studio-06.jpg", "alt": "Studio 06", "w": 720, "h": 1440}
   ],
   "sequential": [
     {"src": "assets/galery/ds-comic-01.jpg", "alt": "Dream Sequence N.1", "desc": "Ivo, il motore del nostro tour non parte!", "w": 682, "h": 1024},
