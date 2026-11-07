@@ -363,7 +363,10 @@ const ALBUM_LINKS = {
     'Structures Sonores': 'https://dreamsequence3.bandcamp.com/album/structures-sonores-pour-syst-mes',
     'Memoria Futura': 'https://dreamsequence3.bandcamp.com/album/memoria-futura',
     'Elektronika Zeď': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976',
-    'Live Prague': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976'
+    'Live Prague': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976',
+    'Concentrique': 'https://dreamsequence3.bandcamp.com/album/concentrique',
+    'Outback Memories': 'https://dreamsequence3.bandcamp.com/album/outback-memories',
+    '70': 'https://dreamsequence3.bandcamp.com/album/70'
 };
 
 window.playAlbum = (title) => {
