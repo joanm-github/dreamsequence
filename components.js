@@ -218,6 +218,7 @@ const Footer = () => `
                         <img src="./assets/logos/anima_nera.png" alt="Anima Nera Partner Logo" class="h-16 md:h-24 w-auto opacity-80" width="1024" height="1024" loading="lazy">
                     </div>
                     <img src="./assets/logos/Orso.png" alt="Orso Records Logo" class="h-10 md:h-14 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
+                    <img src="./assets/logos/lontani_tapes.jpg" alt="Lontani Tapes Logo" class="h-10 md:h-14 w-auto opacity-80 hover:opacity-100 transition-opacity" loading="lazy">
                 </div>
             </div>
 
