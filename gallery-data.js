@@ -11,7 +11,8 @@ window.GALLERY_DATA = {
     {"src": "assets/galery/ds-comic-01.jpg", "alt": "Dream Sequence N.1", "desc": "Ivo, il motore del nostro tour non parte!", "w": 682, "h": 1024},
     {"src": "assets/galery/ds-comic-02.jpg", "alt": "Dream Sequence N.2", "desc": "Operazione Big Moog", "w": 1022, "h": 1538},
     {"src": "assets/galery/ds-comic-03.jpg", "alt": "Dream Sequence N.3", "desc": "Si sono addormentati!!!", "w": 681, "h": 1024},
-    {"src": "assets/galery/ds-comic-04.jpeg", "alt": "Dream Sequence N.4", "desc": "In Czechoslovakia: Prague 1976", "w": 1024, "h": 1536}
+    {"src": "assets/galery/ds-comic-04.jpeg", "alt": "Dream Sequence N.4", "desc": "In Czechoslovakia: Prague 1976", "w": 1024, "h": 1536},
+    {"src": "assets/galery/ds-comic-05.jpg", "alt": "Dream Sequence N.5", "desc": "In Portugal: November 1976", "w": 843, "h": 1264}
   ],
   "live": [
     {"src": "assets/galery/ds-live-01.png", "alt": "Live 01", "w": 880, "h": 1216},
