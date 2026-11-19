@@ -367,7 +367,8 @@ const ALBUM_LINKS = {
     'Live Prague': 'https://dreamsequence3.bandcamp.com/album/iv-v-praze-1976',
     'Concentrique': 'https://dreamsequence3.bandcamp.com/album/concentrique',
     'Outback Memories': 'https://dreamsequence3.bandcamp.com/album/outback-memories',
-    '70': 'https://dreamsequence3.bandcamp.com/album/70'
+    '70': 'https://dreamsequence3.bandcamp.com/album/70',
+    'Oblivion': 'https://dreamsequence3.bandcamp.com/album/oblivion'
 };
 
 window.playAlbum = (title) => {
